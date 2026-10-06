@@ -505,7 +505,7 @@ html_template = f"""<!DOCTYPE html>
                     <span class="badge green">E2E Simulation & Systems V&V</span>
                     <span class="badge">Docker / Linux / Python / C++</span>
                 </div>
-                <h1 class="hero-title">Patrick Johnston — Engineering & Mission Performance Prospectus</h1>
+                <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
                     Final-year Electrical & Electronics Engineering undergraduate specializing in <b>Control Systems, Power Engineering, and Data Communications</b>. Experienced in building containerized Software-in-the-Loop (SIL) simulation pipelines, automated test dataset workflows, and systems compliance verification.
                 </p>
@@ -520,7 +520,7 @@ html_template = f"""<!DOCTYPE html>
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">01 // Systems Verification Overview</div>
+                    <div class="section-kicker">01 // Technical Skills Overview</div>
                     <h2 class="section-title">Engineering Competency & Operational Readiness Matrix</h2>
                 </div>
                 <div class="section-desc">
@@ -534,7 +534,7 @@ html_template = f"""<!DOCTYPE html>
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">02 // Key Project Breakdown — Simulation & Software Ops</div>
+                    <div class="section-kicker">02 // Key Project Breakdown — Model Development, Simulation & Software Integrations</div>
                     <h2 class="section-title">Data-Driven Hierarchical MPC & End-to-End SIL Simulation Framework</h2>
                 </div>
                 <div class="section-desc">
