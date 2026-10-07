@@ -507,7 +507,8 @@ html_template = f"""<!DOCTYPE html>
                 </div>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
-                    Final-year Electrical & Electronics Engineering undergraduate specializing in <b>Control Systems, Power Engineering, and Data Communications</b>. Experienced in building containerized Software-in-the-Loop (SIL) simulation pipelines, automated test dataset workflows, and systems compliance verification.
+                    Final year Electrical & Electronics Engineering undergraduate with experience in <b>Control Systems, and Power Systems Engineering<b>. I have notable technical project based experience in building C/C++ and Python programming, containerized Software in the Loop (SIL) simulation pipelines, and systems compliance and factory acceptance testing verification.
+.
                 </p>
                 <div class="cli-bar">
                     <span class="cli-prompt">$</span>
