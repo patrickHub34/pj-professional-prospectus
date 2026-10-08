@@ -17,7 +17,7 @@ master_data = [
     {
         "metric": "Linux CLI &<br>Remote Server<br>Operations",
         "pillar": "Software & Linux Infrastructure",
-        "verified": 3, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
+        "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
         "evidence": "Simulation execution through SSH, automated log filtering, SFTP data retrieval, permission management.",
         "tools": "Linux CLI, SSH, Bash",
         "jd_req": "Connect to remote servers via SSH, and transfer files FTP/SFTP/FTPS"
@@ -26,7 +26,7 @@ master_data = [
         "metric": "Python & C/C++<br>Programming",
         "pillar": "Software & Linux Infrastructure",
         "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "High-performance numerical computing, build system integration, telemetry logging.",
+        "evidence": "High performance numerical computing, build system integration, telemetry logging.",
         "tools": "VSCode, Python and C/C++ libraries, Bazel, MATLAB/Simulink, Arduino IDE",
         "jd_req": "Follow code structure, interpret build/runtime errors, adjust parameters"
     },
@@ -184,19 +184,17 @@ fig_master.update_layout(
 # 2. PROJECT 1 BREAKDOWN CHART: H-MPC & SIL SIMULATION PIPELINE
 # -------------------------------------------------------------------------
 proj1_metrics = [
-    "Hermetic Build & CI<br>(Bazel / Docker / GH Actions)",
-    "High-Performance Numerical Sim<br>(Python / JAX Acceleration)",
-    "Multi-Agent Scenario Data<br>(WOMD / Waymax Extraction)",
-    "Predictive Control & Thermal<br>(Hierarchical MPC Design)",
-    "Cloud Telemetry & Anomaly Log<br>(Weights & Biases MLOps)",
+    "Build & CI<br>(Bazel / Docker / Git Actions)",
+    "High-Performance Numerical Simulation<br>(Python / JAX Acceleration)",
+    "Predictive Control Design<br>(Hierarchical MPC)",
+    "Cloud Telemetry & Anomaly Log<br>(Weights & Biases)",
 ]
-proj1_scores = [3.9, 3.8, 3.7, 3.8, 3.7]
+proj1_scores = [3.0, 3.0, 3.6, 3.0]
 proj1_details = [
     "Reproducible monorepo builds in Linux containers with automated CI testing.",
-    "JIT-compiled vectorised simulation loops & sensitivity trade evaluations.",
-    "Automated parsing, filtering, and validation of multi-agent trajectory arrays.",
+    "Native JAX compiled vectorised simulation loops",
     "Coupled energy and battery thermal management under dynamic constraints.",
-    "Real-time experiment tracking, constraint violation alerts, and run comparison.",
+    "Real-time experiment tracking and run comparison.",
 ]
 
 fig_proj1 = go.Figure(
@@ -205,7 +203,7 @@ fig_proj1 = go.Figure(
         x=proj1_scores,
         orientation="h",
         marker=dict(
-            color=["#38bdf8", "#38bdf8", "#34d399", "#34d399", "#818cf8"],
+            color=["#38bdf8", "#38bdf8", "#34d399", "#818cf8"],
             line=dict(color="#111827", width=1),
             opacity=0.9,
         ),
@@ -240,13 +238,13 @@ fig_proj1.update_layout(
 # 3. PROJECT 2 BREAKDOWN CHART: POWER, CONTROL & RF SIGNAL PROCESSING
 # -------------------------------------------------------------------------
 proj2_metrics = [
-    "Control Loop Modeling & PID<br>(MATLAB / Simulink)",
-    "Power Load Flow & Faults<br>(DIgSILENT / PSS SINCAL)",
-    "Protection Relay Grading<br>(Compliance & Selectivity)",
-    "Industrial Automation V&V<br>(Spark Engineering Placement)",
-    "RF Comms & OFDM Channels<br>(Multipath / Signal Processing)",
+    "Systems Verification & Validation<br>(FAT/SAT Compliance)",
+    "Control Logic & PLC Integration<br>(Schneider / SCADA)",
+    "Hardware to Software Interfacing and Integration<br>(Conveyor Systems)",
+    "Architecture & Network Documentation",
+    "Interdisciplinary Engineering Team Coordination",
 ]
-proj2_scores = [3.7, 3.6, 3.5, 3.5, 2.9]
+proj2_scores = [3.0, 3.2, 2.6, 3.0, 3.0]
 proj2_details = [
     "Transfer function derivation, root-locus stability, step-response characterization.",
     "Newton-Raphson load flow studies and three-phase short-circuit fault analysis.",
@@ -292,13 +290,127 @@ fig_proj2.update_layout(
     height=300,
 )
 
+# -------------------------------------------------------------------------
+# 4. PROJECT 3 BREAKDOWN CHART: MARS HVAC & POWER SYSTEM DESIGN
+# -------------------------------------------------------------------------
+proj3_metrics = [
+    "Requirements Traceability &<br>QFD Matrix Mapping",
+    "Power Budgeting &<br>Efficiency Optimisations",
+    "Thermal / Environmental<br>System Modeling",
+    "Closed-Loop Resource<br>Management",
+    "Technical Feasibility &<br>Concept Validation",
+]
+proj3_scores = [3.4, 3.6, 3.0, 3.0, 3.0]
+proj3_details = [
+    "Translated life support requirements into verifiable engineering metrics.",
+    "Managed core design constraints balancing robust power usage and storage.",
+    "Modeled regenerative heat exchange fluid loops and advanced aerogels.",
+    "Evaluated and proposed complete closed-loop thermal systems.",
+    "Validated overarching systems feasibility for conceptual surface habitats.",
+]
+
+fig_proj3 = go.Figure(
+    go.Bar(
+        y=proj3_metrics,
+        x=proj3_scores,
+        orientation="h",
+        marker=dict(
+            color=["#818cf8", "#38bdf8", "#34d399", "#fbbf24", "#fbbf24"],
+            line=dict(color="#111827", width=1),
+            opacity=0.9,
+        ),
+        customdata=proj3_details,
+        text=[f"L{s:.1f}" for s in proj3_scores],
+        textposition="inside",
+        insidetextanchor="end",
+        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a", weight="bold"),
+        hovertemplate="<b>%{y}</b><br>Verified Tier: Level %{x:.1f} / 4.0<br>%{customdata}<extra></extra>",
+    )
+)
+
+fig_proj3.update_layout(
+    bargap=0.32,
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
+    font=dict(family="Inter, sans-serif", color="#cbd5e1", size=11),
+    xaxis=dict(
+        range=[0, 4.1],
+        tickvals=[1, 2, 3, 4],
+        ticktext=["L1: Theory", "L2: Practical<br>Foundation", "L3: Proficient<br>Execution", "L4: Advanced<br>Application"],
+        gridcolor="#1e293b",
+        zerolinecolor="#334155",
+    ),
+    yaxis=dict(autorange="reversed", gridcolor="rgba(0,0,0,0)"),
+    hoverlabel=dict(bgcolor="#0f172a", bordercolor="#818cf8", font=dict(color="#f8fafc")),
+    margin=dict(l=185, r=20, t=15, b=35),
+    height=300,
+)
+
+# -------------------------------------------------------------------------
+# 5. PROJECT 4 BREAKDOWN CHART: HMAS OTAMA SUBMARINE SALVAGE
+# -------------------------------------------------------------------------
+proj4_metrics = [
+    "Structural Stabilization &<br>Buoyancy Control",
+    "Complex Systems Recovery<br>& Towage Logistics",
+    "Operational Plan<br>Revision & Execution",
+    "Field Operations &<br>Interteam Coordination",
+    "Dynamic Risk Assessment &<br>Environmental Mitigation",
+]
+proj4_scores = [3.4, 3.0, 3.0, 2.8, 2.6]
+proj4_details = [
+    "Developed precision buoyancy systems and integrated structural wet welding repairs.",
+    "Implemented secure towage infrastructure ensuring vessel integrity.",
+    "Continuously revised and executed dynamic multi-disciplinary salvage plans.",
+    "Acted as a liaison between the underwater dive team and the engineering team.",
+    "Ensured safety and strict environmental compliance in active southern ocean conditions.",
+]
+
+fig_proj4 = go.Figure(
+    go.Bar(
+        y=proj4_metrics,
+        x=proj4_scores,
+        orientation="h",
+        marker=dict(
+            color=["#34d399", "#38bdf8", "#818cf8", "#fbbf24", "#f43f5e"],
+            line=dict(color="#111827", width=1),
+            opacity=0.9,
+        ),
+        customdata=proj4_details,
+        text=[f"L{s:.1f}" for s in proj4_scores],
+        textposition="inside",
+        insidetextanchor="end",
+        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a", weight="bold"),
+        hovertemplate="<b>%{y}</b><br>Verified Tier: Level %{x:.1f} / 4.0<br>%{customdata}<extra></extra>",
+    )
+)
+
+fig_proj4.update_layout(
+    bargap=0.32,
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
+    font=dict(family="Inter, sans-serif", color="#cbd5e1", size=11),
+    xaxis=dict(
+        range=[0, 4.1],
+        tickvals=[1, 2, 3, 4],
+        ticktext=["L1: Theory", "L2: Practical<br>Foundation", "L3: Proficient<br>Execution", "L4: Advanced<br>Application"],
+        gridcolor="#1e293b",
+        zerolinecolor="#334155",
+    ),
+    yaxis=dict(autorange="reversed", gridcolor="rgba(0,0,0,0)"),
+    hoverlabel=dict(bgcolor="#0f172a", bordercolor="#34d399", font=dict(color="#f8fafc")),
+    margin=dict(l=185, r=20, t=15, b=35),
+    height=300,
+)
+
 # Convert figures to embeddable HTML fragments
 chart_master_html = pio.to_html(fig_master, full_html=False, include_plotlyjs="cdn", config={"displaylogo": False})
 chart_proj1_html = pio.to_html(fig_proj1, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
 chart_proj2_html = pio.to_html(fig_proj2, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
+chart_proj3_html = pio.to_html(fig_proj3, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
+chart_proj4_html = pio.to_html(fig_proj4, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
 
 # -------------------------------------------------------------------------
-# 4. ASSEMBLE FULL SLEEK SPACE-GREY WEB PROSPECTUS (index.html)
+# 6. ASSEMBLE FULL SLEEK SPACE-GREY WEB PROSPECTUS (index.html)
 # -------------------------------------------------------------------------
 html_template = f"""<!DOCTYPE html>
 <html lang="en">
@@ -403,19 +515,6 @@ html_template = f"""<!DOCTYPE html>
             max-width: 880px;
             margin-bottom: 1.1rem;
         }}
-        .cli-bar {{
-            background: #060911;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            padding: 0.55rem 1rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.78rem;
-            color: #cbd5e1;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-        }}
-        .cli-prompt {{ color: var(--accent-green); font-weight: 600; }}
         /* Section Cards */
         .section-card {{
             background: var(--bg-card);
@@ -496,7 +595,6 @@ html_template = f"""<!DOCTYPE html>
         <!-- 1. EXECUTIVE INTRODUCTION BANNER -->
         <header class="hero-card">
             <div class="avatar-box">
-                <!-- Tip: Place a photo named profile.jpg in your folder and uncomment the img tag below -->
                 <!-- <img src="profile.jpg" alt="Patrick Johnston"> -->
                 PJ
             </div>
@@ -508,8 +606,7 @@ html_template = f"""<!DOCTYPE html>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
                     Final year Electrical & Electronics Engineering undergraduate with experience in <b>Control and Power Systems Engineering</b>. I have notable technical project based experience in building C/C++ and Python programs, containerised Software in the Loop (SIL) simulation pipelines, and systems compliance and factory acceptance testing verification.
-.
-                </div>
+                </p>
             </div>
         </header>
 
@@ -521,7 +618,7 @@ html_template = f"""<!DOCTYPE html>
                     <h2 class="section-title">Engineering Competency & Operational Readiness Matrix</h2>
                 </div>
                 <div class="section-desc">
-                    Hover over any metric bar to inspect concrete project evidence, tool stack, and JD verification mapping.
+                    This matrix aligns my self defined competencies with the core job requirements and expectations. Hover over any metric bar to view supporting project evidence, tools used, and job description (JD) requirement mapping.
                 </div>
             </div>
             {chart_master_html}
@@ -543,7 +640,6 @@ html_template = f"""<!DOCTYPE html>
                     <h4>Architecture & Project Scope</h4>
                     <p>
                         Designed and executed a Software in the Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi-agent driving autonomous driving scenarios/trajectories.
-
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
@@ -562,28 +658,88 @@ html_template = f"""<!DOCTYPE html>
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">03 // Key Project Breakdown — Systems Analysis & Signal Foundations</div>
+                    <div class="section-kicker">03 // Key Project Breakdown — Control Systems Development, Testing and Integration</div>
                     <h2 class="section-title">Control Systems Design, Grid Protection Grading & RF Channel Modeling</h2>
                 </div>
                 <div class="section-desc">
-                    Spark Engineering Placement & Advanced Engineering Coursework
+                    Spark Engineering | Undergraduate Control Systems Engineer
                 </div>
             </div>
             <div class="project-grid">
                 <div class="project-info">
                     <h4>Project Scope and My Role</h4>
                     <p>
-                        Combined industrial control systems engineering placement experience with analytical modeling of electrical power networks, protection compliance, and wireless digital communication links.
+                        Facilitated the integration of modernised conveyor systems into legacy mechanical infrastructure through control system design, through PLC programming and SCADA development. Additionally, assisted with Factory and Site Acceptance Testing (FAT/SAT) to verify compliance with client expectations, and designed system performance metrics.
                     </p>
                     <ul class="spec-list">
-                        <li><span class="spec-label">INDUSTRY PLACEMENT</span> <span>Spark Engineering (Control & Automation)</span></li>
-                        <li><span class="spec-label">CONTROL & DYNAMICS</span> <span>MATLAB & Simulink (PID / Root Locus)</span></li>
-                        <li><span class="spec-label">POWER & PROTECTION</span> <span>DIgSILENT PowerFactory & PSS SINCAL</span></li>
-                        <li><span class="spec-label">RF / SIGNAL PHYSICS</span> <span>OFDM, Multipath Fading & FFT Analysis</span></li>
+                        <li><span class="spec-label">CONTROL LOGIC</span> <span>Schneider Control Expert (Control & Automation)</span></li>
+                        <li><span class="spec-label">HMI & SCADA</span> <span>AVEVA Plant SCADA</span></li>
+                        <li><span class="spec-label">SYSTEMS V&V</span> <span>FAT & SAT Protocols & Execution</span></li>
+                        <li><span class="spec-label">PLANT SYSTEM DOCUMENTATION AND HANDLING</span> <span>Plant Network Systems Diagrams and Documentation</span></li>
                     </ul>
                 </div>
                 <div>
                     {chart_proj2_html}
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PROJECT BREAKDOWN 03: MARS HVAC & POWER -->
+        <section class="section-card">
+            <div class="section-header">
+                <div>
+                    <div class="section-kicker">04 // Key Project Breakdown — Thermal Dynamics, Systems & Resource Planning</div>
+                    <h2 class="section-title">Mars HVAC and Power System Design Project</h2>
+                </div>
+                <div class="section-desc">
+                    Selective University Engineering Project | Conceptual Modular Mars Surface Habitat
+                </div>
+            </div>
+            <div class="project-grid">
+                <div class="project-info">
+                    <h4>Project Scope and My Role</h4>
+                    <p>
+                        Investigated and evaluated potential closed loop HVAC solutions for a conceptual modular Mars surface habitat, establishing power requirements and thermal mapping alongside Quality Function Deployment (QFD) matrices.
+                    </p>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">THERMAL DYNAMICS</span> <span>Regenerative Heat Exchange Fluid Loop & Aerogels</span></li>
+                        <li><span class="spec-label">SYSTEMS ENGINEERING</span> <span>QFD & Requirements Definition and Traceability</span></li>
+                        <li><span class="spec-label">CONTROL SYSTEMS</span> <span>AI-Driven Environmental Sensored System</span></li>
+                        <li><span class="spec-label">CORE DESIGN CONSTRAINTS</span> <span>Power Usage and Management Constraints</span></li>
+                    </ul>
+                </div>
+                <div>
+                    {chart_proj3_html}
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PROJECT BREAKDOWN 04: SALVAGE OPERATION -->
+        <section class="section-card">
+            <div class="section-header">
+                <div>
+                    <div class="section-kicker">05 // Key Project Breakdown — Naval Field Operations & Risk Mitigation</div>
+                    <h2 class="section-title">HMAS OTAMA Submarine Salvage Project</h2>
+                </div>
+                <div class="section-desc">
+                    Extensive Multi-Disciplinary Recovery | Dynamic Southern Ocean Conditions
+                </div>
+            </div>
+            <div class="project-grid">
+                <div class="project-info">
+                    <h4>Project Scope and My Role</h4>
+                    <p>
+                        Supported multi-disciplinary dive and engineering teams in executing the salvage operation of a compromised naval submarine, implementing buoyancy stabilization, wet welding repairs, and towage infrastructure.
+                    </p>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">FIELD OPERATIONS</span> <span>Underwater Salvage & Buoyancy Stabilization</span></li>
+                        <li><span class="spec-label">STRUCTURAL ENGINEERING</span> <span>Wet-Welding & Mooring Infrastructure Design</span></li>
+                        <li><span class="spec-label">RISK MANAGEMENT</span> <span>Environmental & Safety Compliance</span></li>
+                        <li><span class="spec-label">PROJECT CONTROL</span> <span>Multi-Disciplinary Operational Plan Revisions</span></li>
+                    </ul>
+                </div>
+                <div>
+                    {chart_proj4_html}
                 </div>
             </div>
         </section>
