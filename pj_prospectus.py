@@ -7,7 +7,7 @@ import plotly.io as pio
 master_data = [
     # Pillar 1: Software & Linux Infrastructure
     {
-        "metric": "Docker & Container<br> Operations & Execution",
+        "metric": "Docker Container<br> Operations &<br>Execution",
         "pillar": "Software & Linux Infrastructure",
         "verified": 3.3, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
         "evidence": "Containerised simulation environments, runtime diagnostics, reproducible CI/CD pipelines.",
@@ -48,7 +48,7 @@ master_data = [
         "jd_req": "Production and verification of test data sets for performance simulators"
     },
     {
-        "metric": "Calibration, Hardware& Integration &<br> Anomaly Analysis &<br> Reporting",
+        "metric": "Calibration, Hardware &<br>Integration &<br> Anomaly Analysis &<br> Reporting",
         "pillar": "Systems Engineering & Validation Processes",
         "verified": 3.4, "upskill": 0.4, "baseline": 3.0, "color": "#34d399",
         "evidence": "Time-series telemetry anomaly detection, ramp and step-response characterisations",
@@ -65,7 +65,7 @@ master_data = [
     },
     # Pillar 3: Payload & Signal Processing
     {
-        "metric": "Optical Imager<br>Simulation & Processing",
+        "metric": "Optical Imager<br>Simulation &<br>Processing",
         "pillar": "Hardware Operations & Signal Processing",
         "verified": 2.1, "upskill": 0.5, "baseline": 3.0, "color": "#fbbf24",
         "evidence": "Proven expertise with optical instruments (Imagers).",
@@ -82,11 +82,12 @@ master_data = [
     },
 ]
 
+
 fig_master = go.Figure()
 
 fig_master.add_trace(
     go.Bar(
-        name="Verified Operational Capability",
+        name="Verified Capability",
         x=[d["metric"] for d in master_data],
         y=[d["verified"] for d in master_data],
         marker=dict(
@@ -127,7 +128,7 @@ fig_master.add_trace(
 
 fig_master.add_trace(
     go.Scatter(
-        name="Role Expectation)",
+        name="Role Expectation",
         x=[d["metric"] for d in master_data],
         y=[d["baseline"] for d in master_data],
         mode="markers+lines",
