@@ -7,78 +7,78 @@ import plotly.io as pio
 master_data = [
     # Pillar 1: Software & Linux Infrastructure
     {
-        "metric": "Docker & Hermetic<br>Execution",
+        "metric": "Docker & Container Operations<br>Execution",
         "pillar": "Software & Linux Infrastructure",
-        "verified": 3.8, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "Containerized simulation environments, multi-stage builds, runtime diagnostics, reproducible CI pipelines.",
+        "verified": 3.3, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
+        "evidence": "Containerised simulation environments, runtime diagnostics, reproducible CI/CD pipelines.",
         "tools": "Docker, Bash, Bazel, GitHub Actions",
         "jd_req": "Start/stop containers, diagnostics, rebuild images, stable execution"
     },
     {
-        "metric": "Linux CLI &<br>Remote Server Ops",
+        "metric": "Linux CLI &<br>Remote Server Operations",
         "pillar": "Software & Linux Infrastructure",
-        "verified": 3.5, "upskill": 0.3, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "Headless simulation execution via SSH, automated log filtering, SFTP data retrieval, permission management.",
-        "tools": "Linux CLI, SSH, SFTP, grep/awk, Bash",
-        "jd_req": "Operate E2E simulators in remote Linux via CLI & review logs"
+        "verified": 3, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
+        "evidence": "Simulation execution through SSH, automated log filtering, SFTP data retrieval, permission management.",
+        "tools": "Linux CLI, SSH, Bash",
+        "jd_req": "Connect to remote servers via SSH, and transfer files FTP/SFTP/FTPS"
     },
     {
-        "metric": "Python & C/C++<br>Simulation Code",
+        "metric": "Python & C/C++<br>Programming",
         "pillar": "Software & Linux Infrastructure",
-        "verified": 3.6, "upskill": 0.3, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "High-performance numerical computing, build system navigation, parameter steering, telemetry logging.",
-        "tools": "Python (JAX/NumPy), C/C++, Bazel, MATLAB",
+        "verified": 3.0, "upskill": 0.3, "baseline": 3.0, "color": "#38bdf8",
+        "evidence": "High-performance numerical computing, build system integration, telemetry logging.",
+        "tools": "VSCode, Python and C/C++ libraries, Bazel, MATLAB/Simulink, Arduino IDE",
         "jd_req": "Follow code structure, interpret build/runtime errors, adjust parameters"
     },
     # Pillar 2: Systems Engineering & V&V
     {
-        "metric": "E2E Simulator<br>Operation & V&V",
-        "pillar": "Systems Engineering & V&V",
-        "verified": 3.7, "upskill": 0.3, "baseline": 3.5, "color": "#34d399",
-        "evidence": "Software-in-the-loop (SIL) predictive control, sensitivity analysis, non-compliance impact evaluation.",
-        "tools": "Waymax SIL, Python, Simulink, W&B",
+        "metric": "E2E Simulatiors<br>Operations & Validations",
+        "pillar": "Systems Engineering & Validation Processes",
+        "verified": 3.0, "upskill": 0.3, "baseline": 3.5, "color": "#34d399",
+        "evidence": "Software-in-the-loop (SIL) predictive control, sensitivity analysis, non-compliance impact matrix evaluation.",
+        "tools": "Waymax SIL, Python, MATLAB/Simulink, W&B",
         "jd_req": "Operate E2E simulators & assess non-compliance on mission performance"
     },
     {
-        "metric": "Test Dataset<br>Production",
-        "pillar": "Systems Engineering & V&V",
-        "verified": 3.6, "upskill": 0.3, "baseline": 3.0, "color": "#34d399",
-        "evidence": "Extraction, synthesis, and validation of large-scale scenario trajectory and telemetry datasets.",
-        "tools": "Python, NumPy/SciPy, WOMD, Automated Pipelines",
+        "metric": "Test Dataset<br>Production & Verification",
+        "pillar": "Systems Engineering & Validation Processes",
+        "verified": 3.0, "upskill": 0.3, "baseline": 3.0, "color": "#34d399",
+        "evidence": "Extraction, synthesis, and validation of large-scale autonomous vehicle scenario trajectory and telemetry datasets.",
+        "tools": "Python, NumPy/SciPy, Automated Pipelines, Waymax Simulator",
         "jd_req": "Production and verification of test data sets for performance simulators"
     },
     {
-        "metric": "Calibration &<br>Anomaly Analysis",
-        "pillar": "Systems Engineering & V&V",
+        "metric": "Calibration, Hardware Integration &<br> Anomaly Analysis & Reporting",
+        "pillar": "Systems Engineering & Validation Processes",
         "verified": 3.4, "upskill": 0.4, "baseline": 3.0, "color": "#34d399",
-        "evidence": "Time-series telemetry anomaly detection, step-response characterization, root-cause reporting.",
+        "evidence": "Time-series telemetry anomaly detection, ramp and step-response characterisations",
         "tools": "Python, MATLAB, Weights & Biases",
-        "jd_req": "Analyze calibration campaign data & report software anomalies"
+        "jd_req": "Analyse calibration and characterization campaign data & Identify software anomalies and report "
     },
     {
         "metric": "Requirements &<br>VCB Compliance",
-        "pillar": "Systems Engineering & V&V",
-        "verified": 3.2, "upskill": 0.5, "baseline": 3.0, "color": "#34d399",
-        "evidence": "System verification matrices, protection/control grading, formal multi-stakeholder technical reviews.",
-        "tools": "Verification Matrices, Git, LaTeX",
+        "pillar": "Systems Engineering & Validation Processes",
+        "verified": 2.0, "upskill": 0.5, "baseline": 3.0, "color": "#34d399",
+        "evidence": "System verification matrices, SAT and FAT Testing Procedures, formal multi-stakeholder technical reviews.",
+        "tools": "Verification Matrices, Git",
         "jd_req": "Support Verification Control Boards (VCB) & compliance tracking"
     },
     # Pillar 3: Payload & Signal Processing
     {
-        "metric": "Optical Imager<br>Simulation",
-        "pillar": "Payload & Signal Processing",
-        "verified": 2.6, "upskill": 0.9, "baseline": 3.0, "color": "#fbbf24",
-        "evidence": "2D spatial array processing, sensor noise modeling, PSF/MTF physical foundations.",
-        "tools": "Python, MATLAB Image Processing, SciPy",
+        "metric": "Optical Imager<br>Simulation & Processing",
+        "pillar": "Hardware Operations & Signal Processing",
+        "verified": 2.1, "upskill": 0.5, "baseline": 3.0, "color": "#fbbf24",
+        "evidence": "Proven expertise with optical instruments (Imagers).",
+        "tools": "Python, MATLAB/Simulink Image Processing",
         "jd_req": "Expertise with optical instruments (imagers) for simulation & processing"
     },
     {
         "metric": "SAR Signal<br>Processing",
-        "pillar": "Payload & Signal Processing",
-        "verified": 2.4, "upskill": 1.0, "baseline": 2.5, "color": "#fbbf24",
-        "evidence": "Digital comms link modeling, multipath channel physics, OFDM signal processing, phase/FFT analysis.",
-        "tools": "MATLAB Wireless Comms, SciPy.signal, FFT",
-        "jd_req": "Synthetic Aperture Radar (SAR) processing (desirable)"
+        "pillar": "Hardware Operations & Signal Processing",
+        "verified": 1.6, "upskill": 1.0, "baseline": 2.8, "color": "#fbbf24",
+        "evidence": "Digital communications link modeling, OFDM signal processing, phase/FFT analysis.",
+        "tools": "MATLAB Wireless Comms, FFT",
+        "jd_req": "Expertise in the field of Synthetic Aperture Radar (SAR) processing"
     },
 ]
 
@@ -101,18 +101,18 @@ fig_master.add_trace(
         hovertemplate=(
             "<b>%{x}</b><br>"
             "<span style='color:#94a3b8'>%{customdata[0]}</span><br><br>"
-            "<b>Verified Tier:</b> Level %{y:.1f} / 4.0<br>"
-            "<b>Active Growth Target:</b> Level %{customdata[4]:.1f} / 4.0<br>"
-            "<b>Evidence:</b> %{customdata[1]}<br>"
-            "<b>Stack:</b> <span style='font-family:JetBrains Mono,monospace;color:#38bdf8'>%{customdata[2]}</span><br>"
-            "<b>JD Mapping:</b> <i>%{customdata[3]}</i><extra></extra>"
+            "<b>Verified Competance Level:</b> Level %{y:.1f} / 4.0<br>"
+            "<b>Active Growth Target (02/27):</b> Level %{customdata[4]:.1f} / 4.0<br>"
+            "<b>Key Evidence:</b> %{customdata[1]}<br>"
+            "<b>Tools:</b> <span style='font-family:JetBrains Mono,monospace;color:#38bdf8'>%{customdata[2]}</span><br>"
+            "<b>JD Requirment/s:</b> <i>%{customdata[3]}</i><extra></extra>"
         ),
     )
 )
 
 fig_master.add_trace(
     go.Bar(
-        name="Active Upskilling / Domain Ramp-Up",
+        name="Active Upskilling and Research",
         x=[d["metric"] for d in master_data],
         y=[d["upskill"] for d in master_data],
         marker=dict(
@@ -127,7 +127,7 @@ fig_master.add_trace(
 
 fig_master.add_trace(
     go.Scatter(
-        name="Role Target Baseline (JD Expectation)",
+        name="Role Expectation)",
         x=[d["metric"] for d in master_data],
         y=[d["baseline"] for d in master_data],
         mode="markers+lines",
@@ -148,7 +148,7 @@ fig_master.update_layout(
         range=[0, 4.35],
         tickvals=[1, 2, 3, 4],
         ticktext=[
-            "<b>L1: Theoretical / Review</b><br><span style='font-size:10px;color:#64748b'>Code structure & math</span>",
+            "<b>L1: Theoretical / Coursework / Review</b><br><span style='font-size:10px;color:#64748b'>Code structure & math</span>",
             "<b>L2: Scripting & Execution</b><br><span style='font-size:10px;color:#64748b'>CLI ops & test datasets</span>",
             "<b>L3: Diagnostics & Anomaly ID</b><br><span style='font-size:10px;color:#64748b'>Log filtering & debugging</span>",
             "<b>L4: E2E Integration & V&V</b><br><span style='font-size:10px;color:#64748b'>Hermetic SIL & VCB closure</span>",
@@ -507,7 +507,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
-                    Final year Electrical & Electronics Engineering undergraduate with experience in <b>Control Systems, and Power Systems Engineering<b>. I have notable technical project based experience in building C/C++ and Python programming, containerized Software in the Loop (SIL) simulation pipelines, and systems compliance and factory acceptance testing verification.
+                    Final year Electrical & Electronics Engineering undergraduate with experience in <b>Control Systems, and Power Systems Engineering</b>. I have notable technical project based experience in building C/C++ and Python programming, containerized Software in the Loop (SIL) simulation pipelines, and systems compliance and factory acceptance testing verification.
 .
                 </p>
                 <div class="cli-bar">
