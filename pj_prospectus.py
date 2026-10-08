@@ -226,7 +226,7 @@ fig_proj1.update_layout(
     xaxis=dict(
         range=[0, 4.1],
         tickvals=[1, 2, 3, 4],
-        ticktext=["L1: Theory", "L2: Execution", "L3: Diagnostics", "L4: E2E V&V"],
+        ticktext=["L1: Theory", "L2: Practical<br>Foundation", "L3: Proficient<br>Execution", "L4: Advanced<br>Application"],
         gridcolor="#1e293b",
         zerolinecolor="#334155",
     ),
