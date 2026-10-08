@@ -246,11 +246,11 @@ proj2_metrics = [
 ]
 proj2_scores = [3.0, 3.2, 2.6, 3.0, 3.0]
 proj2_details = [
-    "Transfer function derivation, root-locus stability, step-response characterization.",
-    "Newton-Raphson load flow studies and three-phase short-circuit fault analysis.",
-    "Time-overcurrent relay coordination and system compliance verification.",
-    "60-day industrial placement delivering control engineering & automation evaluations.",
-    "Digital communication link modeling, multipath fading channels, and OFDM modulation.",
+    "Assited in FAT and SAT documentation and priocedures to verify control system compliance with client and design expectations.",
+    "Assited in development of system control logic and HMI systems using Schneider Control Expert and AVEVA Plant SCADA.",
+    "Works involved integrated modernised conveyor systems into legacy mechanical infrastructure.",
+    "Developed plant network systems diagrams and management of system documentation.",
+    "Collaborated across project teams in the design and performance validation processes."
 ]
 
 fig_proj2 = go.Figure(
@@ -295,7 +295,7 @@ fig_proj2.update_layout(
 # -------------------------------------------------------------------------
 proj3_metrics = [
     "Requirements Traceability &<br>QFD Matrix Mapping",
-    "Power Budgeting &<br>Efficiency Optimisations",
+    "Power Budgeting &<br>Efficiency Evaluations",
     "Thermal / Environmental<br>System Modeling",
     "Closed-Loop Resource<br>Management",
     "Technical Feasibility &<br>Concept Validation",
@@ -303,10 +303,10 @@ proj3_metrics = [
 proj3_scores = [3.4, 3.6, 3.0, 3.0, 3.0]
 proj3_details = [
     "Translated life support requirements into verifiable engineering metrics.",
-    "Managed core design constraints balancing robust power usage and storage.",
+    "Managed core design constraints of power usage and thermal efficiency.",
     "Modeled regenerative heat exchange fluid loops and advanced aerogels.",
-    "Evaluated and proposed complete closed-loop thermal systems.",
-    "Validated overarching systems feasibility for conceptual surface habitats.",
+    "Evaluated and proposed complete closed-loop thermal system.",
+    "Validated systems feasibility for conceptual surface habitats.",
 ]
 
 fig_proj3 = go.Figure(
@@ -350,19 +350,19 @@ fig_proj3.update_layout(
 # 5. PROJECT 4 BREAKDOWN CHART: HMAS OTAMA SUBMARINE SALVAGE
 # -------------------------------------------------------------------------
 proj4_metrics = [
-    "Structural Stabilization &<br>Buoyancy Control",
-    "Complex Systems Recovery<br>& Towage Logistics",
-    "Operational Plan<br>Revision & Execution",
-    "Field Operations &<br>Interteam Coordination",
+    "Structural Stabilisation &<br>Buoyancy Control",
+    "Complex Recovery<br>& Towage Logistics",
+    "Operational Plan<br>Revisions & Execution",
+    "Field Operations &<br>Inter-team Coordination",
     "Dynamic Risk Assessment &<br>Environmental Mitigation",
 ]
 proj4_scores = [3.4, 3.0, 3.0, 2.8, 2.6]
 proj4_details = [
-    "Developed precision buoyancy systems and integrated structural wet welding repairs.",
-    "Implemented secure towage infrastructure ensuring vessel integrity.",
-    "Continuously revised and executed dynamic multi-disciplinary salvage plans.",
-    "Acted as a liaison between the underwater dive team and the engineering team.",
-    "Ensured safety and strict environmental compliance in active southern ocean conditions.",
+    "Constructed and secured precision buoyancy systems and integrated structural wet welding repairs.",
+    "Implemented secure towage infrastructure and assited in towage operations",
+    "Engaged in dynamic multi-disciplinary salvage plans adaption and iterations.",
+    "Liaised with the engineering team on on specifications and expectations.",
+    "Safety and environmental compliance in active ocean conditions.",
 ]
 
 fig_proj4 = go.Figure(
@@ -659,7 +659,7 @@ html_template = f"""<!DOCTYPE html>
             <div class="section-header">
                 <div>
                     <div class="section-kicker">03 // Key Project Breakdown — Control Systems Development, Testing and Integration</div>
-                    <h2 class="section-title">Control Systems Design, Grid Protection Grading & RF Channel Modeling</h2>
+                    <h2 class="section-title">Esperance Grain Terminal Control System Upgrade Project</h2>
                 </div>
                 <div class="section-desc">
                     Spark Engineering | Undergraduate Control Systems Engineer
@@ -675,7 +675,7 @@ html_template = f"""<!DOCTYPE html>
                         <li><span class="spec-label">CONTROL LOGIC</span> <span>Schneider Control Expert (Control & Automation)</span></li>
                         <li><span class="spec-label">HMI & SCADA</span> <span>AVEVA Plant SCADA</span></li>
                         <li><span class="spec-label">SYSTEMS V&V</span> <span>FAT & SAT Protocols & Execution</span></li>
-                        <li><span class="spec-label">PLANT SYSTEM DOCUMENTATION AND HANDLING</span> <span>Plant Network Systems Diagrams and Documentation</span></li>
+                        <li><span class="spec-label">PLANT DOCUMENTATION</span> <span>Plant Network Systems Auditing and Diagrams</span></li>
                     </ul>
                 </div>
                 <div>
@@ -704,7 +704,7 @@ html_template = f"""<!DOCTYPE html>
                     <ul class="spec-list">
                         <li><span class="spec-label">THERMAL DYNAMICS</span> <span>Regenerative Heat Exchange Fluid Loop & Aerogels</span></li>
                         <li><span class="spec-label">SYSTEMS ENGINEERING</span> <span>QFD & Requirements Definition and Traceability</span></li>
-                        <li><span class="spec-label">CONTROL SYSTEMS</span> <span>AI-Driven Environmental Sensored System</span></li>
+                        <li><span class="spec-label">CONTROL SYSTEMS</span> <span> Environmental Sensored Feedback Controlled System</span></li>
                         <li><span class="spec-label">CORE DESIGN CONSTRAINTS</span> <span>Power Usage and Management Constraints</span></li>
                     </ul>
                 </div>
@@ -718,11 +718,11 @@ html_template = f"""<!DOCTYPE html>
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">05 // Key Project Breakdown — Naval Field Operations & Risk Mitigation</div>
+                    <div class="section-kicker">05 // Key Project Breakdown — Complex Marine Salavge Operations & Risk Mitigation</div>
                     <h2 class="section-title">HMAS OTAMA Submarine Salvage Project</h2>
                 </div>
                 <div class="section-desc">
-                    Extensive Multi-Disciplinary Recovery | Dynamic Southern Ocean Conditions
+                    Aegir Divers | Extensive Multi-Disciplinary Submarine Recovery Project
                 </div>
             </div>
             <div class="project-grid">
@@ -735,7 +735,7 @@ html_template = f"""<!DOCTYPE html>
                         <li><span class="spec-label">FIELD OPERATIONS</span> <span>Underwater Salvage & Buoyancy Stabilization</span></li>
                         <li><span class="spec-label">STRUCTURAL ENGINEERING</span> <span>Wet-Welding & Mooring Infrastructure Design</span></li>
                         <li><span class="spec-label">RISK MANAGEMENT</span> <span>Environmental & Safety Compliance</span></li>
-                        <li><span class="spec-label">PROJECT CONTROL</span> <span>Multi-Disciplinary Operational Plan Revisions</span></li>
+                        <li><span class="spec-label">PROJECT CONTROL</span> <span>Multi-Disciplinary Operational Plan Iterations</span></li>
                     </ul>
                 </div>
                 <div>
