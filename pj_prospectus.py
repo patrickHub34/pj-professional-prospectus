@@ -7,7 +7,7 @@ import plotly.io as pio
 master_data = [
     # Pillar 1: Software & Linux Infrastructure
     {
-        "metric": "Docker & Container Operations<br>Execution",
+        "metric": "Docker & Container<br> Operations & Execution",
         "pillar": "Software & Linux Infrastructure",
         "verified": 3.3, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
         "evidence": "Containerised simulation environments, runtime diagnostics, reproducible CI/CD pipelines.",
@@ -15,7 +15,7 @@ master_data = [
         "jd_req": "Start/stop containers, diagnostics, rebuild images, stable execution"
     },
     {
-        "metric": "Linux CLI &<br>Remote Server Operations",
+        "metric": "Linux CLI &<br>Remote Server<br>Operations",
         "pillar": "Software & Linux Infrastructure",
         "verified": 3, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
         "evidence": "Simulation execution through SSH, automated log filtering, SFTP data retrieval, permission management.",
@@ -32,7 +32,7 @@ master_data = [
     },
     # Pillar 2: Systems Engineering & V&V
     {
-        "metric": "E2E Simulatiors<br>Operations & Validations",
+        "metric": "E2E Simulatiors<br>Operations &<br> Validations",
         "pillar": "Systems Engineering & Validation Processes",
         "verified": 3.0, "upskill": 0.3, "baseline": 3.5, "color": "#34d399",
         "evidence": "Software-in-the-loop (SIL) predictive control, sensitivity analysis, non-compliance impact matrix evaluation.",
@@ -40,7 +40,7 @@ master_data = [
         "jd_req": "Operate E2E simulators & assess non-compliance on mission performance"
     },
     {
-        "metric": "Test Dataset<br>Production & Verification",
+        "metric": "Test Dataset<br>Production &<br> Verification",
         "pillar": "Systems Engineering & Validation Processes",
         "verified": 3.0, "upskill": 0.3, "baseline": 3.0, "color": "#34d399",
         "evidence": "Extraction, synthesis, and validation of large-scale autonomous vehicle scenario trajectory and telemetry datasets.",
@@ -48,7 +48,7 @@ master_data = [
         "jd_req": "Production and verification of test data sets for performance simulators"
     },
     {
-        "metric": "Calibration, Hardware Integration &<br> Anomaly Analysis & Reporting",
+        "metric": "Calibration, Hardware& Integration &<br> Anomaly Analysis &<br> Reporting",
         "pillar": "Systems Engineering & Validation Processes",
         "verified": 3.4, "upskill": 0.4, "baseline": 3.0, "color": "#34d399",
         "evidence": "Time-series telemetry anomaly detection, ramp and step-response characterisations",
