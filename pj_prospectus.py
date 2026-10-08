@@ -9,7 +9,7 @@ master_data = [
     {
         "metric": "Docker Container<br> Operations &<br>Execution",
         "pillar": "Software & Linux Infrastructure",
-        "verified": 3.3, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
+        "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
         "evidence": "Containerised simulation environments, runtime diagnostics, reproducible CI/CD pipelines.",
         "tools": "Docker, Bash, Bazel, GitHub Actions",
         "jd_req": "Start/stop containers, diagnostics, rebuild images, stable execution"
@@ -25,7 +25,7 @@ master_data = [
     {
         "metric": "Python & C/C++<br>Programming",
         "pillar": "Software & Linux Infrastructure",
-        "verified": 3.0, "upskill": 0.3, "baseline": 3.0, "color": "#38bdf8",
+        "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
         "evidence": "High-performance numerical computing, build system integration, telemetry logging.",
         "tools": "VSCode, Python and C/C++ libraries, Bazel, MATLAB/Simulink, Arduino IDE",
         "jd_req": "Follow code structure, interpret build/runtime errors, adjust parameters"
@@ -42,7 +42,7 @@ master_data = [
     {
         "metric": "Test Dataset<br>Production &<br> Verification",
         "pillar": "Systems Engineering & Validation Processes",
-        "verified": 3.0, "upskill": 0.3, "baseline": 3.0, "color": "#34d399",
+        "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#34d399",
         "evidence": "Extraction, synthesis, and validation of large-scale autonomous vehicle scenario trajectory and telemetry datasets.",
         "tools": "Python, NumPy/SciPy, Automated Pipelines, Waymax Simulator",
         "jd_req": "Production and verification of test data sets for performance simulators"
@@ -67,7 +67,7 @@ master_data = [
     {
         "metric": "Optical Imager<br>Simulation &<br>Processing",
         "pillar": "Hardware Operations & Signal Processing",
-        "verified": 2.0, "upskill": 0.5, "baseline": 3.5, "color": "#fbbf24",
+        "verified": 1.5, "upskill": 1.0, "baseline": 3.5, "color": "#fbbf24",
         "evidence": "Proven expertise with optical instruments (Imagers).",
         "tools": "Python, MATLAB/Simulink Image Processing",
         "jd_req": "Expertise with optical instruments (imagers) for simulation & processing"
@@ -75,7 +75,7 @@ master_data = [
     {
         "metric": "SAR Signal<br>Processing",
         "pillar": "Hardware Operations & Signal Processing",
-        "verified": 1.5, "upskill": 1.0, "baseline": 3.0, "color": "#fbbf24",
+        "verified": 2.0, "upskill": 0.5, "baseline": 3.0, "color": "#fbbf24",
         "evidence": "Digital communications link modeling, OFDM signal processing, phase/FFT analysis.",
         "tools": "MATLAB Wireless Comms, FFT",
         "jd_req": "Expertise in the field of Synthetic Aperture Radar (SAR) processing"
@@ -282,7 +282,7 @@ fig_proj2.update_layout(
     xaxis=dict(
         range=[0, 4.1],
         tickvals=[1, 2, 3, 4],
-        ticktext=["L1: Theory", "L2: Execution", "L3: Diagnostics", "L4: E2E V&V"],
+        ticktext=["L1: Theory", "L2: Practical<br>Foundation", "L3: Proficient<br>Execution", "L4: Advanced<br>Application"],
         gridcolor="#1e293b",
         zerolinecolor="#334155",
     ),
@@ -305,7 +305,7 @@ html_template = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick Johnston | Engineering & Simulation Prospectus</title>
+    <title>Patrick Johnston | Engineering Prospectus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -503,17 +503,12 @@ html_template = f"""<!DOCTYPE html>
             <div>
                 <div class="hero-meta">
                     <span class="badge">B.Eng (Hons) Electrical & Electronics Engineering</span>
-                    <span class="badge green">E2E Simulation & Systems V&V</span>
-                    <span class="badge">Docker / Linux / Python / C++</span>
+                    <span class="badge green">Docker / Linux / Python / C++</span>
                 </div>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
-                    Final year Electrical & Electronics Engineering undergraduate with experience in <b>Control Systems, and Power Systems Engineering</b>. I have notable technical project based experience in building C/C++ and Python programming, containerized Software in the Loop (SIL) simulation pipelines, and systems compliance and factory acceptance testing verification.
+                    Final year Electrical & Electronics Engineering undergraduate with experience in <b>Control and Power Systems Engineering</b>. I have notable technical project based experience in building C/C++ and Python programs, containerised Software in the Loop (SIL) simulation pipelines, and systems compliance and factory acceptance testing verification.
 .
-                </p>
-                <div class="cli-bar">
-                    <span class="cli-prompt">$</span>
-                    <span>docker build -t pj-prospectus . && docker run -p 8080:8080 pj-prospectus</span>
                 </div>
             </div>
         </header>
@@ -537,20 +532,21 @@ html_template = f"""<!DOCTYPE html>
             <div class="section-header">
                 <div>
                     <div class="section-kicker">02 // Key Project Breakdown — Model Development, Simulation & Software Integrations</div>
-                    <h2 class="section-title">Data-Driven Hierarchical MPC & End-to-End SIL Simulation Framework</h2>
+                    <h2 class="section-title">Data-Driven Hierarchical MPC & SIL Simulation Framework</h2>
                 </div>
                 <div class="section-desc">
-                    Honours Engineering Thesis | Hermetic Linux/Docker Pipeline
+                    Honours Engineering Thesis | Linux/Docker Conterised CI/CD Simulation Pipeline
                 </div>
             </div>
             <div class="project-grid">
                 <div class="project-info">
-                    <h4>Architecture & Verification Scope</h4>
+                    <h4>Architecture & Project Scope</h4>
                     <p>
-                        Designed and executed an End-to-End Software-in-the-Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi-agent driving trajectories.
+                        Designed and executed a Software in the Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi-agent driving autonomous driving scenarios/trajectories.
+
                     </p>
                     <ul class="spec-list">
-                        <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Hermetic Monorepo</span></li>
+                        <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
                         <li><span class="spec-label">SIMULATION ENGINE</span> <span>Python / JAX + Waymax Simulator</span></li>
                         <li><span class="spec-label">TEST DATASETS</span> <span>Waymo Open Motion Dataset (WOMD)</span></li>
                         <li><span class="spec-label">TELEMETRY & V&V</span> <span>Weights & Biases + GitHub Actions CI</span></li>
@@ -575,7 +571,7 @@ html_template = f"""<!DOCTYPE html>
             </div>
             <div class="project-grid">
                 <div class="project-info">
-                    <h4>Systems Compliance & Physical Modeling</h4>
+                    <h4>Project Scope and My Role</h4>
                     <p>
                         Combined industrial control systems engineering placement experience with analytical modeling of electrical power networks, protection compliance, and wireless digital communication links.
                     </p>
