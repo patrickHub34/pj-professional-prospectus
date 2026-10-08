@@ -48,7 +48,7 @@ master_data = [
         "jd_req": "Production and verification of test data sets for performance simulators"
     },
     {
-        "metric": "Calibration, Hardware &<br>Integration &<br> Anomaly Analysis &<br> Reporting",
+        "metric": "Calibration,<br>Hardware<br>Integration &<br> Anomaly Analysis &<br> Reporting",
         "pillar": "Systems Engineering & Validation Processes",
         "verified": 3.4, "upskill": 0.4, "baseline": 3.0, "color": "#34d399",
         "evidence": "Time-series telemetry anomaly detection, ramp and step-response characterisations",
@@ -67,7 +67,7 @@ master_data = [
     {
         "metric": "Optical Imager<br>Simulation &<br>Processing",
         "pillar": "Hardware Operations & Signal Processing",
-        "verified": 2.1, "upskill": 0.5, "baseline": 3.0, "color": "#fbbf24",
+        "verified": 2.0, "upskill": 0.5, "baseline": 3.5, "color": "#fbbf24",
         "evidence": "Proven expertise with optical instruments (Imagers).",
         "tools": "Python, MATLAB/Simulink Image Processing",
         "jd_req": "Expertise with optical instruments (imagers) for simulation & processing"
@@ -75,7 +75,7 @@ master_data = [
     {
         "metric": "SAR Signal<br>Processing",
         "pillar": "Hardware Operations & Signal Processing",
-        "verified": 1.6, "upskill": 1.0, "baseline": 2.8, "color": "#fbbf24",
+        "verified": 1.5, "upskill": 1.0, "baseline": 3.0, "color": "#fbbf24",
         "evidence": "Digital communications link modeling, OFDM signal processing, phase/FFT analysis.",
         "tools": "MATLAB Wireless Comms, FFT",
         "jd_req": "Expertise in the field of Synthetic Aperture Radar (SAR) processing"
@@ -149,10 +149,10 @@ fig_master.update_layout(
         range=[0, 4.35],
         tickvals=[1, 2, 3, 4],
         ticktext=[
-            "<b>L1: Theoretical / Coursework / Review</b><br><span style='font-size:10px;color:#64748b'>Code structure & math</span>",
-            "<b>L2: Scripting & Execution</b><br><span style='font-size:10px;color:#64748b'>CLI ops & test datasets</span>",
-            "<b>L3: Diagnostics & Anomaly ID</b><br><span style='font-size:10px;color:#64748b'>Log filtering & debugging</span>",
-            "<b>L4: E2E Integration & V&V</b><br><span style='font-size:10px;color:#64748b'>Hermetic SIL & VCB closure</span>",
+            "<b>L1: Theoretical Knowledge</b><br><span style='font-size:10px;color:#64748b'>Academic grounding, conceptual understanding & observation</span>",
+            "<b>L2: Practical Foundation</b><br><span style='font-size:10px;color:#64748b'>Guided execution, basic scripting & procedural operations</span>",
+            "<b>L3: Proficient Execution</b><br><span style='font-size:10px;color:#64748b'>Operational competence, system diagnostics & troubleshooting</span>",
+            "<b>L4: Advanced Applications</b><br><span style='font-size:10px;color:#64748b'>Full integrations, validation & architectural synthesis</span>",
         ],
         gridcolor="#1e293b",
         zerolinecolor="#334155",
