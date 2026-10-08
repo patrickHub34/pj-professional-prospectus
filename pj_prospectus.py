@@ -246,8 +246,8 @@ proj2_metrics = [
 ]
 proj2_scores = [3.0, 3.2, 2.6, 3.0, 3.0]
 proj2_details = [
-    "Assited in FAT and SAT documentation and priocedures to verify control system compliance with client and design expectations.",
-    "Assited in development of system control logic and HMI systems using Schneider Control Expert and AVEVA Plant SCADA.",
+    "Assited in FAT and SAT documentation and priocedures to verify control system<r>compliance with client and design expectations.",
+    "Assited in development of system control logic and HMI systems using Schneider<r>Control Expert and AVEVA Plant SCADA.",
     "Works involved integrated modernised conveyor systems into legacy mechanical infrastructure.",
     "Developed plant network systems diagrams and management of system documentation.",
     "Collaborated across project teams in the design and performance validation processes."
@@ -358,7 +358,7 @@ proj4_metrics = [
 ]
 proj4_scores = [3.4, 3.0, 3.0, 2.8, 2.6]
 proj4_details = [
-    "Constructed and secured precision buoyancy systems and integrated structural wet welding repairs.",
+    "Constructed and secured precision buoyancy systems and<r>integrated structural wet welding repairs.",
     "Implemented secure towage infrastructure and assited in towage operations",
     "Engaged in dynamic multi-disciplinary salvage plans adaption and iterations.",
     "Liaised with the engineering team on on specifications and expectations.",
@@ -644,7 +644,7 @@ html_template = f"""<!DOCTYPE html>
                     <ul class="spec-list">
                         <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
                         <li><span class="spec-label">SIMULATION ENGINE</span> <span>Python / JAX + Waymax Simulator</span></li>
-                        <li><span class="spec-label">TEST DATASETS</span> <span>Waymo Open Motion Dataset (WOMD)</span></li>
+                        <li><span class="spec-label">TEST DATASETS</span> <span>Waymo Open Motion Dataset</span></li>
                         <li><span class="spec-label">TELEMETRY & V&V</span> <span>Weights & Biases + GitHub Actions CI</span></li>
                     </ul>
                 </div>
@@ -733,7 +733,7 @@ html_template = f"""<!DOCTYPE html>
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">FIELD OPERATIONS</span> <span>Underwater Salvage & Buoyancy Stabilization</span></li>
-                        <li><span class="spec-label">STRUCTURAL ENGINEERING</span> <span>Wet-Welding & Mooring Infrastructure Design</span></li>
+                        <li><span class="spec-label">STRUCTURAL ENGINEERING</span> <span>Wet Welding & Mooring Infrastructure Design</span></li>
                         <li><span class="spec-label">RISK MANAGEMENT</span> <span>Environmental & Safety Compliance</span></li>
                         <li><span class="spec-label">PROJECT CONTROL</span> <span>Multi-Disciplinary Operational Plan Iterations</span></li>
                     </ul>
