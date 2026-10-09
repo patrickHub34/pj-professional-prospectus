@@ -244,10 +244,10 @@ proj2_metrics = [
     "Architecture & Network Documentation",
     "Interdisciplinary Engineering Team Coordination",
 ]
-proj2_scores = [3.0, 3.2, 2.6, 3.0, 3.0]
+proj2_scores = [2.8, 3.2, 2.6, 3.0, 3.0]
 proj2_details = [
-    "Assited in FAT and SAT documentation and priocedures to verify control system<r>compliance with client and design expectations.",
-    "Assited in development of system control logic and HMI systems using Schneider<r>Control Expert and AVEVA Plant SCADA.",
+    "Assited in FAT and SAT documentation and priocedures to verify control system<br>compliance with client and design expectations.",
+    "Assited in development of system control logic and HMI systems using Schneider<br>Control Expert and AVEVA Plant SCADA.",
     "Works involved integrated modernised conveyor systems into legacy mechanical infrastructure.",
     "Developed plant network systems diagrams and management of system documentation.",
     "Collaborated across project teams in the design and performance validation processes."
@@ -300,7 +300,7 @@ proj3_metrics = [
     "Closed-Loop Resource<br>Management",
     "Technical Feasibility &<br>Concept Validation",
 ]
-proj3_scores = [3.4, 3.6, 3.0, 3.0, 3.0]
+proj3_scores = [3.2, 3.4, 3.0, 3.0, 3.0]
 proj3_details = [
     "Translated life support requirements into verifiable engineering metrics.",
     "Managed core design constraints of power usage and thermal efficiency.",
@@ -356,9 +356,9 @@ proj4_metrics = [
     "Field Operations &<br>Inter-team Coordination",
     "Dynamic Risk Assessment &<br>Environmental Mitigation",
 ]
-proj4_scores = [3.4, 3.0, 3.0, 2.8, 2.6]
+proj4_scores = [3.2, 3.0, 3.0, 2.8, 2.6]
 proj4_details = [
-    "Constructed and secured precision buoyancy systems and<r>integrated structural wet welding repairs.",
+    "Constructed and secured precision buoyancy systems and<br>integrated structural wet welding repairs.",
     "Implemented secure towage infrastructure and assited in towage operations",
     "Engaged in dynamic multi-disciplinary salvage plans adaption and iterations.",
     "Liaised with the engineering team on on specifications and expectations.",
