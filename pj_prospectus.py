@@ -248,9 +248,9 @@ proj2_scores = [2.8, 3.2, 2.6, 3.0, 3.0]
 proj2_details = [
     "Assited in FAT and SAT documentation and priocedures to verify control system<br>compliance with client and design expectations.",
     "Assited in development of system control logic and HMI systems using Schneider<br>Control Expert and AVEVA Plant SCADA.",
-    "Works involved integrated modernised conveyor systems into legacy mechanical infrastructure.",
-    "Developed plant network systems diagrams and management of system documentation.",
-    "Collaborated across project teams in the design and performance validation processes."
+    "Works involved integrated modernised conveyor systems into legacy<br>mechanical infrastructure.",
+    "Developed plant network systems diagrams and management of<br>system documentation.",
+    "Collaborated across project teams in the design and<br>performance validation processes."
 ]
 
 fig_proj2 = go.Figure(
