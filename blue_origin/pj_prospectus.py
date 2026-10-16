@@ -8,35 +8,35 @@ import plotly.io as pio
 master_data = [
     # Pillar 1: High-Performance Computing & Code Optimization
     {
-        "metric": "MATLAB & Python<br>Scientific<br>Computing",
-        "pillar": "High-Performance Computing & Code Optimization",
+        "metric": "MATLAB &<br> Python<br>Scientific<br>Computing",
+        "pillar": "Performance Computing & Code Optimization",
         "verified": 3.2, "upskill": 0.3, "baseline": 3.5, "color": "#38bdf8",
-        "evidence": "University simulation coursework, non-linear dynamic modeling, vectorized array operations in NumPy/JAX & MATLAB.",
+        "evidence": "University simulation coursework, non-linear dynamic modelling, vectorized array operations in NumPy/JAX & MATLAB.",
         "tools": "MATLAB/Simulink, Python, NumPy, SciPy, JAX",
         "jd_req": "Optimize MATLAB & Python simulation models; familiarity with numerical methods & scientific computing"
     },
     {
         "metric": "Code Profiling,<br>Vectorization &<br>Refactoring",
-        "pillar": "High-Performance Computing & Code Optimization",
-        "verified": 3.0, "upskill": 0.4, "baseline": 3.5, "color": "#38bdf8",
-        "evidence": "Refactored monolithic scripts into modular monorepo packages; eliminated Python loops via JAX JIT compilation & array vectorization.",
-        "tools": "JAX JIT/vmap, Python Profilers, MATLAB Profiler, Modular Architecture",
-        "jd_req": "Profile/benchmark code for bottlenecks; refactor legacy scripts into modular, maintainable codebases"
+        "pillar": "Performance Computing & Code Optimization",
+        "verified": 2.8, "upskill": 0.4, "baseline": 3.5, "color": "#38bdf8",
+        "evidence": "Refactored monolithic thesis project scripts into modular packages; removed Python loops via JAX JIT compilation & array vectorization.",
+        "tools": "Python Profilers, MATLAB Profiler, Modular Architecture Design/Adaptation",
+        "jd_req": "Profile/benchmark code for bottlenecks; refactor scripts into modular, maintainable codebases"
     },
     {
-        "metric": "C/C++ Algorithms<br>& Memory<br>Management",
-        "pillar": "High-Performance Computing & Code Optimization",
+        "metric": "C/C++<br>Algorithms<br>& Memory<br>Management",
+        "pillar": "Performance Computing & Code Optimization",
         "verified": 2.4, "upskill": 0.6, "baseline": 3.5, "color": "#38bdf8",
-        "evidence": "Embedded & algorithmic C/C++ programming, data structure selection, static typing, and memory-constrained execution.",
-        "tools": "C/C++, GCC/Clang, Data Structures, Memory Allocation, MEX (Active Upskilling)",
-        "jd_req": "Implement high-performance C++ algorithms; memory management, data structures & MEX integration"
+        "evidence": "Embedded & algorithmic C/C++ programming, and data structure selection.",
+        "tools": "C/C++, Data Structures, Memory Allocation, MEX (Active Upskilling)",
+        "jd_req": "Implement high-performance C++ algorithms for computationally intensive antenna and silicon modeling tasks"
     },
     {
-        "metric": "Parallel Computing<br>& Hardware<br>Acceleration",
-        "pillar": "High-Performance Computing & Code Optimization",
-        "verified": 2.6, "upskill": 0.6, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "Parallelized batch trajectory simulations and matrix solvers using XLA/JAX vectorization; active study in OpenMP & MATLAB PCT.",
-        "tools": "JAX (vmap/pmap), XLA, Multiprocessing, MATLAB Parallel Toolbox (Upskilling)",
+        "metric": "Parallel<br>Computing<br>& Hardware<br>Acceleration",
+        "pillar": "Performance Computing & Code Optimization",
+        "verified": 2.5, "upskill": 0.5, "baseline": 3.0, "color": "#38bdf8",
+        "evidence": "Parallelized batch trajectory simulations and matrix solvers using XLA/JAX vectorization; active study through thesis project, OpenMP & MATLAB PCT.",
+        "tools": "Python/JAX (vmap/pmap), JIT/XLA compilations, MATLAB Parallel Computing Toolbox (Upskilling)",
         "jd_req": "Explore and integrate parallel computing techniques (MATLAB PCT, OpenMP, MPI)"
     },
 
@@ -44,43 +44,43 @@ master_data = [
     {
         "metric": "Unit / Integration<br>Testing & Fidelity<br>Verification",
         "pillar": "Simulation V&V & Software Infrastructure",
-        "verified": 3.1, "upskill": 0.3, "baseline": 3.2, "color": "#34d399",
-        "evidence": "Automated unit/integration test suites verifying mathematical solver invariants and physical model fidelity pre/post-optimization.",
-        "tools": "Pytest, Bazel Test, Regression Benchmarking, FAT/SAT Verification",
-        "jd_req": "Develop unit/integration tests to validate model accuracy before and after optimization"
+        "verified": 2.8, "upskill": 0.4, "baseline": 3.2, "color": "#34d399",
+        "evidence": "Automated unit/integration test suites verifying mathematical solver invariants and physical model fidelity before and after optimizations.",
+        "tools": "Pytest, Bazel Test, Regression Benchmarking, FAT/SAT Verifications",
+        "jd_req": "Develop and maintain unit and integration tests to validate model accuracy before and after optimization"
     },
     {
-        "metric": "CI/CD Pipelines,<br>Git & Container<br>Environments",
+        "metric": "CI/CD<br>Pipelines,<br>Git & Container<br>Environments",
         "pillar": "Simulation V&V & Software Infrastructure",
-        "verified": 3.2, "upskill": 0.2, "baseline": 3.0, "color": "#34d399",
-        "evidence": "Hermetic monorepo build orchestration, containerized simulation runners, automated GitHub Actions validation workflows.",
+        "verified": 3.0, "upskill": 0.4, "baseline": 3.0, "color": "#34d399",
+        "evidence": "Containerised simulation environments, runtime diagnostics, reproducible CI/CD pipelines.",
         "tools": "Git, GitHub Actions, Docker, Bazel, Linux CLI",
-        "jd_req": "Experience with version control (Git) & supporting continuous integration pipelines for model validation"
+        "jd_req": "Experience with version control (Git)"
     },
     {
-        "metric": "Technical Docs &<br>Cross-Disciplinary<br>Collaboration",
+        "metric": "Technical<br>Documentation &<br>Cross<br>Disciplinary<br>Collaboration",
         "pillar": "Simulation V&V & Software Infrastructure",
         "verified": 3.2, "upskill": 0.2, "baseline": 3.0, "color": "#34d399",
-        "evidence": "Authored formal engineering verification reports, benchmarking logs, and interface registers across multi-disciplinary teams.",
-        "tools": "Weights & Biases, LaTeX, Markdown, Technical Review Matrices",
-        "jd_req": "Collaborate with hardware/RF engineers on physical models; document optimization methodologies & results"
+        "evidence": "Authored formal engineering verification reports and benchmarking logs across multi disciplinary teams and projects.",
+        "tools": "Weights & Biases, Excel, MATLAB, LaTeX, Technical Review Matrices",
+        "jd_req": "Collaboration with hardware/RF engineers on physical models; documentation of optimization strategies, methodologies & results"
     },
 
     # Pillar 3: Signal Processing, RF & Physical Modeling
     {
-        "metric": "DSP, Spectral<br>Analysis & Comms<br>Modeling",
+        "metric": "DSP, Spectral<br>Analysis &<br>Communications<br>Modeling",
         "pillar": "Signal Processing, RF & Physical Modeling",
         "verified": 2.3, "upskill": 0.6, "baseline": 3.0, "color": "#fbbf24",
         "evidence": "University EEE coursework in digital signal processing, FFT spectral analysis, filter design, and OFDM link simulation in MATLAB.",
-        "tools": "MATLAB DSP & Comms Toolboxes, FFT, Filter Design, Complex Baseband",
-        "jd_req": "Background in signal processing; collaborate with DSP engineers on simulation models"
+        "tools": "MATLAB DSP & Digitial Communications Toolboxes, FFT, Coursework Filter Design and Analysis Resources",
+        "jd_req": "Background in signal processing for collaboration with DSP engineers on simulation models"
     },
     {
-        "metric": "Phased Array (PAA),<br>Beamforming & RF<br>Physics Modeling",
+        "metric": "Phased Array,<br>Beamforming & RF<br>Physics Modeling",
         "pillar": "Signal Processing, RF & Physical Modeling",
         "verified": 1.8, "upskill": 0.8, "baseline": 3.0, "color": "#fbbf24",
         "evidence": "Undergraduate electromagnetics & wave propagation foundation; active self-directed study in array factor math & digital beamforming (DBF).",
-        "tools": "MATLAB Phased Array System Toolbox, EM Wave Theory, Steering Vector Math",
+        "tools": "MATLAB Phased Array System Toolbox & EM Wave Theory",
         "jd_req": "Optimize models for phased array antenna (PAA) systems, digital beamforming (DBF) & silicon RF components"
     },
 ]
@@ -153,9 +153,9 @@ fig_master.update_layout(
         tickvals=[1, 2, 3, 4],
         ticktext=[
             "<b>L1: Theoretical Knowledge</b><br><span style='font-size:10px;color:#64748b'>Academic grounding, conceptual understanding & observation</span>",
-            "<b>L2: Practical Foundation</b><br><span style='font-size:10px;color:#64748b'>Guided execution, coursework scripting & procedural operations</span>",
+            "<b>L2: Practical Foundation</b><br><span style='font-size:10px;color:#64748b'>Guided execution, basic scripting & procedural operations</span>",
             "<b>L3: Proficient Execution</b><br><span style='font-size:10px;color:#64748b'>Applied project competence, profiling & modular development</span>",
-            "<b>L4: Advanced Applications</b><br><span style='font-size:10px;color:#64748b'>Production architecture, deep optimization & multi-system synthesis</span>",
+            "<b>L4: Advanced Applications</b><br><span style='font-size:10px;color:#64748b'>Production grade architectures & multi-system synthesis</span>",
         ],
         gridcolor="#1e293b",
         zerolinecolor="#334155",
@@ -639,7 +639,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
-                    Final-semester Electrical & Electronic Engineering (Honours) undergraduate with 1 year of industry and research experience in <b>high-performance numerical simulation, control systems, and verification</b>. Proven capability in refactoring and accelerating mathematical models in <b>MATLAB, Python (JAX/NumPy), and C/C++</b>, alongside building reproducible, containerized Software-in-the-Loop (SIL) CI/CD validation pipelines.
+                    Final semester Electrical & Electronic Engineering (Honours) undergraduate with 1 year of industry and research experience in <b>performance numerical simulation, control systems, and model verification</b>. Proven capability in translating and accelerating mathematical models using <b>MATLAB, Python (JAX/NumPy), and C/C++</b>, alongside building reproducible, containerised Software in Loop (SIL) CI/CD validation pipelines.
                 </p>
             </div>
         </header>
@@ -652,11 +652,11 @@ html_template = f"""<!DOCTYPE html>
                     <h2 class="section-title">Engineering Competency & Operational Readiness Matrix</h2>
                 </div>
                 <div class="section-desc">
-                    Transparently maps verified undergraduate & industry capabilities against Blue Origin's role expectations. Hover over any metric bar to inspect supporting evidence, toolchains, and direct Job Description (JD) alignment.
+                    This matrix aligns my self defined competencies with the core job requirements and expectations. Hover over any metric bar to view supporting project evidence, tools used, and job description (JD) requirement mapping.
                 </div>
             </div>
             <div class="pillar-legend">
-                <div class="pillar-item"><span class="dot" style="background:#38bdf8;"></span> <b>Pillar 1:</b> High-Performance Computing & Code Optimization</div>
+                <div class="pillar-item"><span class="dot" style="background:#38bdf8;"></span> <b>Pillar 1:</b> Performance Computing & Coding Refinement</div>
                 <div class="pillar-item"><span class="dot" style="background:#34d399;"></span> <b>Pillar 2:</b> Simulation V&V & Software Infrastructure</div>
                 <div class="pillar-item"><span class="dot" style="background:#fbbf24;"></span> <b>Pillar 3:</b> Signal Processing, RF & Physical Modeling</div>
             </div>
