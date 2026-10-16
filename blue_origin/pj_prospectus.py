@@ -44,7 +44,7 @@ master_data = [
     {
         "metric": "Unit / Integration<br>Testing & Fidelity<br>Verification",
         "pillar": "Simulation V&V & Software Infrastructure",
-        "verified": 2.8, "upskill": 0.4, "baseline": 3.2, "color": "#34d399",
+        "verified": 2.8, "upskill": 0.4, "baseline": 3.5, "color": "#34d399",
         "evidence": "Automated unit/integration test suites verifying mathematical solver invariants and physical model fidelity before and after optimizations.",
         "tools": "Pytest, Bazel Test, Regression Benchmarking, FAT/SAT Verifications",
         "jd_req": "Develop and maintain unit and integration tests to validate model accuracy before and after optimization"
@@ -635,7 +635,6 @@ html_template = f"""<!DOCTYPE html>
                 <div class="hero-meta">
                     <span class="badge">B.Eng (Hons) Electrical & Electronic Engineering (Final Semester)</span>
                     <span class="badge green">MATLAB / Python / C++ / JAX</span>
-                    <span class="badge amber">Simulation Optimization & V&V</span>
                 </div>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
