@@ -8,7 +8,7 @@ import plotly.io as pio
 master_data = [
     # Pillar 1: High-Performance Computing & Code Optimization
     {
-        "metric": "MATLAB &<br> Python<br>Scientific<br>Computing",
+        "metric": "MATLAB &<br>Python<br>Scientific<br>Computing",
         "pillar": "Performance Computing & Code Optimization",
         "verified": 3.2, "upskill": 0.3, "baseline": 3.5, "color": "#38bdf8",
         "evidence": "University simulation coursework, non-linear dynamic modelling, vectorized array operations in NumPy/JAX & MATLAB.",
@@ -19,7 +19,7 @@ master_data = [
         "metric": "Code Profiling,<br>Vectorization &<br>Refactoring",
         "pillar": "Performance Computing & Code Optimization",
         "verified": 2.8, "upskill": 0.4, "baseline": 3.5, "color": "#38bdf8",
-        "evidence": "Refactored monolithic thesis project scripts into modular packages; removed Python loops via JAX JIT compilation & array vectorization.",
+        "evidence": "Refactored monolithic thesis project scripts into modular packages, removed Python loops via JAX JIT compilation & array vectorization.",
         "tools": "Python Profilers, MATLAB Profiler, Modular Architecture Design/Adaptation",
         "jd_req": "Profile/benchmark code for bottlenecks; refactor scripts into modular, maintainable codebases"
     },
@@ -35,7 +35,7 @@ master_data = [
         "metric": "Parallel<br>Computing<br>& Hardware<br>Acceleration",
         "pillar": "Performance Computing & Code Optimization",
         "verified": 2.5, "upskill": 0.5, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "Parallelized batch trajectory simulations and matrix solvers using XLA/JAX vectorization; active study through thesis project, OpenMP & MATLAB PCT.",
+        "evidence": "Parallelized batch trajectory simulations and matrix solvers using XLA/JAX vectorization, active study through thesis project, OpenMP & MATLAB PCT.",
         "tools": "Python/JAX (vmap/pmap), JIT/XLA compilations, MATLAB Parallel Computing Toolbox (Upskilling)",
         "jd_req": "Explore and integrate parallel computing techniques (MATLAB PCT, OpenMP, MPI)"
     },
@@ -45,7 +45,7 @@ master_data = [
         "metric": "Unit / Integration<br>Testing & Fidelity<br>Verification",
         "pillar": "Simulation V&V & Software Infrastructure",
         "verified": 2.8, "upskill": 0.4, "baseline": 3.5, "color": "#34d399",
-        "evidence": "Automated unit/integration test suites verifying mathematical solver invariants and physical model fidelity before and after optimizations.",
+        "evidence": "Automated unit/integration testing verifying mathematical solver invariants and physical model fidelity before and after optimizations.",
         "tools": "Pytest, Bazel Test, Regression Benchmarking, FAT/SAT Verifications",
         "jd_req": "Develop and maintain unit and integration tests to validate model accuracy before and after optimization"
     },
@@ -60,8 +60,8 @@ master_data = [
     {
         "metric": "Technical<br>Documentation &<br>Cross<br>Disciplinary<br>Collaboration",
         "pillar": "Simulation V&V & Software Infrastructure",
-        "verified": 3.2, "upskill": 0.2, "baseline": 3.0, "color": "#34d399",
-        "evidence": "Authored formal engineering verification reports and benchmarking logs across multi disciplinary teams and projects.",
+        "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#34d399",
+        "evidence": "Developed formal engineering verification reports and integrated benchmark logging across multi disciplinary teams and projects.",
         "tools": "Weights & Biases, Excel, MATLAB, LaTeX, Technical Review Matrices",
         "jd_req": "Collaboration with hardware/RF engineers on physical models; documentation of optimization strategies, methodologies & results"
     },
@@ -79,7 +79,7 @@ master_data = [
         "metric": "Phased Array,<br>Beamforming & RF<br>Physics Modeling",
         "pillar": "Signal Processing, RF & Physical Modeling",
         "verified": 1.8, "upskill": 0.8, "baseline": 3.0, "color": "#fbbf24",
-        "evidence": "Undergraduate electromagnetics & wave propagation foundation; active self-directed study in array factor math & digital beamforming (DBF).",
+        "evidence": "Undergraduate electromagnetics & wave propagation foundation, and active self-directed study in array factor math & digital beamforming (DBF).",
         "tools": "MATLAB Phased Array System Toolbox & EM Wave Theory",
         "jd_req": "Optimize models for phased array antenna (PAA) systems, digital beamforming (DBF) & silicon RF components"
     },
@@ -307,7 +307,7 @@ proj3_scores = [3.2, 3.4, 3.0, 3.0, 3.0]
 proj3_details = [
     "Translated life support requirements into verifiable engineering metrics.",
     "Managed core design constraints of power usage and thermal efficiency.",
-    "Modeled regenerative heat exchange fluid loops and advanced aerogels.",
+    "Modelled regenerative heat exchange fluid loops and advanced aerogels.",
     "Evaluated and proposed complete closed-loop thermal system.",
     "Validated systems feasibility for conceptual surface habitats.",
 ]
@@ -677,7 +677,7 @@ html_template = f"""<!DOCTYPE html>
                 <div class="project-info">
                     <h4>Architecture & Project Scope</h4>
                     <p>
-                        Designed and executed a Software-in-the-Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi-agent autonomous driving scenarios/trajectories, utilizing vectorized numerical solvers and automated regression testing.
+                        Designed and executed a Software-in-the-Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi agent autonomous driving scenarios/trajectories, utilizing vectorized numerical solvers and automated regression testing.
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
