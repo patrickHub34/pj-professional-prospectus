@@ -670,7 +670,7 @@ html_template = f"""<!DOCTYPE html>
                     <h2 class="section-title">Data-Driven Hierarchical MPC & SIL Simulation Framework</h2>
                 </div>
                 <div class="section-desc">
-                    Honours Engineering Thesis | Linux/Docker Containerised CI/CD Simulation Pipeline
+                    Honours Engineering Thesis | Containerised CI/CD Simulation Pipeline
                 </div>
             </div>
             <div class="project-grid">
