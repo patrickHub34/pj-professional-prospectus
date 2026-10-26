@@ -659,8 +659,7 @@ html_template = f"""<!DOCTYPE html>
             <div>
                 <div class="hero-meta">
                     <span class="badge">B.Eng (Hons) Electrical & Electronic Engineering (Completing Jan 2027)</span>
-                    <span class="badge green">Incoming M.Sc Space Engineering (UNSW 2027)</span>
-                    <span class="badge amber">Target: GomSpace Satellite Systems Hardware (Aalborg)</span>
+                    <span class="badge green">Upcoming M.Sc Space Engineering (2027)</span>
                 </div>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
@@ -674,16 +673,16 @@ html_template = f"""<!DOCTYPE html>
             <div class="section-header">
                 <div>
                     <div class="section-kicker">01 // Target Role Alignment: Early-Career RF Engineer (Satellite Systems Hardware Team)</div>
-                    <h2 class="section-title">Engineering Competency & 18-Month Operational Readiness Matrix</h2>
+                    <h2 class="section-title">Engineering Competency & 18 Month Operational Readiness Matrix</h2>
                 </div>
                 <div class="section-desc">
                     This matrix maps and aligns my self defined and verified engineering capabilities, and projected upskilling projections directly against GomSpace's Early Career RF Engineer requirements. Hover over any metric bar to view supporting project evidence, tools used, and job description (JD) requirement mapping.
                 </div>
             </div>
             <div class="pillar-legend">
-                <div class="pillar-item"><span class="dot" style="background:#38bdf8;"></span> <b>Pillar 1:</b> RF Subsystems, Link Budgets & SDR Architecture</div>
-                <div class="pillar-item"><span class="dot" style="background:#34d399;"></span> <b>Pillar 2:</b> Reusable Tooling, HIL/SIL V&V & Automation</div>
-                <div class="pillar-item"><span class="dot" style="background:#fbbf24;"></span> <b>Pillar 3:</b> Satellite Systems Engineering & ECSS Interfaces</div>
+                <div class="pillar-item"><span class="dot" style="background:#38bdf8;"></span> <b>Pillar 1:</b> RF Subsystems, Link Budgeting & SDR Architectures</div>
+                <div class="pillar-item"><span class="dot" style="background:#34d399;"></span> <b>Pillar 2:</b> HIL/SIL V&V & Automation</div>
+                <div class="pillar-item"><span class="dot" style="background:#fbbf24;"></span> <b>Pillar 3:</b> Satellite Systems & ECSS Engineering</div>
             </div>
             {chart_master_html}
         </section>
@@ -733,7 +732,7 @@ html_template = f"""<!DOCTYPE html>
                 <div class="project-info">
                     <h4>Architecture & GomSpace Transferability</h4>
                     <p>
-                        Designed and executed a Software-in-the-Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across dynamic scenarios, utilizing vectorized numerical solvers and automated CI/CD regression testing. Directly transferable to reusable RF link modelling and automated HIL test pipelines.
+                        Designed and executed a Software-in-the-Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi agent autonomous driving scenarios/trajectories, utilizing vectorized numerical solvers and automated regression testing.
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
