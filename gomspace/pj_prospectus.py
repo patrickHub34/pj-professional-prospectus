@@ -11,78 +11,78 @@ master_data = [
     {
         "metric": "Link-Budget &<br>RF-Chain<br>Modelling",
         "pillar": "RF Subsystems, Link Budgets & SDR Architecture",
-        "verified": 2.2, "upskill": 1.1, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "EEE electromagnetics, wave propagation & link simulation coursework; building modular Python S/X-band dynamic orbital link-budget engine.",
-        "tools": "Python, MATLAB Communications Toolbox, Free-Space/Atmospheric Loss Models",
-        "jd_req": "Perform link-budget analysis and RF-chain modelling across frequency bands & mission constraints"
+        "verified": 2.0, "upskill": 1.1, "baseline": 3.0, "color": "#38bdf8",
+        "evidence": "EEE electromagnetics, wave propagation & link simulation coursework",
+        "tools": "Python, MATLAB Communications Toolbox",
+        "jd_req": "Perform link-budget analysis and RF-chain modelling"
     },
     {
         "metric": "SDR Platforms,<br>Modulation &<br>Onboard DSP",
         "pillar": "RF Subsystems, Link Budgets & SDR Architecture",
-        "verified": 2.4, "upskill": 0.9, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "University DSP, FFT spectral analysis, filter design & OFDM/QPSK link modelling; Completed MathWorks Wireless Communications Onramp.",
-        "tools": "MATLAB DSP/Comms, Python, SDR Prototyping (GNU Radio / PlutoSDR / USRP Target)",
-        "jd_req": "Work with NanoCom radios & SDR platforms; contribute to onboard signal-processing & data-reduction"
+        "verified": 2.0, "upskill": 0.9, "baseline": 3.0, "color": "#38bdf8",
+        "evidence": "University DSP, FFT spectral analysis, filter design & OFDM/QPSK link modelling",
+        "tools": "MATLAB",
+        "jd_req": "Contribute to onboard signal-processing and data-reduction activities for RF applications"
     },
     {
         "metric": "RF Front-End<br>Evaluation<br>(UHF/VHF/S/X)",
         "pillar": "RF Subsystems, Link Budgets & SDR Architecture",
         "verified": 1.9, "upskill": 1.1, "baseline": 2.8, "color": "#38bdf8",
-        "evidence": "Undergraduate RF/microwave theory, cascaded noise figure (NF), gain & linearity (IIP3) trade-off analysis; targeted UNSW MSc RF coursework.",
-        "tools": "MATLAB RF Toolbox, CST / ADS / HFSS (Active MSc Upskilling), Component Datasheets",
-        "jd_req": "Assist with evaluation and selection of RF front-end components across UHF, VHF, S-band and X-band"
+        "evidence": "Undergraduate RF/microwave theory, and targeted through MSc RF project and coursework.",
+        "tools": "Active MSc Upskilling in MATLAB RF Toolbox, CST / ADS / HFSS",
+        "jd_req": "Assist with the evaluation and selection of RF front-end components across UHF, VHF, S-band and X-band."
     },
     {
         "metric": "RF Lab Bench<br>Testing &<br>Troubleshooting",
         "pillar": "RF Subsystems, Link Budgets & SDR Architecture",
-        "verified": 2.1, "upskill": 0.9, "baseline": 2.8, "color": "#38bdf8",
-        "evidence": "University electronics laboratory diagnostics (oscilloscopes, signal generators, spectral measurements) & industrial hardware fault-finding.",
-        "tools": "Spectrum Analysers, Vector Network Analysers (VNA), Signal Generators, Bench Diagnostics",
-        "jd_req": "Prepare and carry out laboratory measurements using RF test equipment; troubleshoot RF performance"
+        "verified": 1.8, "upskill": 0.9, "baseline": 2.8, "color": "#38bdf8",
+        "evidence": "University electronics laboratory work (oscilloscopes, signal generators, spectral measurements) & industry hardware troubleshooting.",
+        "tools": "Spectrum Analysers, Signal Generators, oscilloscopes",
+        "jd_req": "Prepare and carry out laboratory measurements using RF test equipment."
     },
 
-    # Pillar 2: Reusable Engineering Tools, HIL/SIL V&V & Test Automation (Core Strength)
+    # Pillar 2: Engineering Tools, HIL/SIL V&V & Test Automation (Core Strength)
     {
-        "metric": "Reusable Python &<br>MATLAB Modelling<br>Frameworks",
-        "pillar": "Reusable Tooling, HIL/SIL V&V & Automation",
-        "verified": 3.3, "upskill": 0.4, "baseline": 3.0, "color": "#34d399",
-        "evidence": "Architected modular, vectorized simulation packages (NumPy/SciPy/JAX & MATLAB) for complex non-linear dynamic and multi-constraint systems.",
-        "tools": "Python (NumPy, SciPy, JAX, Plotly), MATLAB/Simulink, Modular OOP/Functional Design",
-        "jd_req": "Familiarity with MATLAB, Python or similar; help develop reusable RF models, test methods and engineering tools"
+        "metric": "Python &<br>MATLAB Modelling<br>Frameworks",
+        "pillar": "Reusable Tooling, HIL/SIL V&V",
+        "verified": 3.2, "upskill": 0.4, "baseline": 3.0, "color": "#34d399",
+        "evidence": "Created modular, vectorized simulation architectured (NumPy/SciPy/JAX & MATLAB) for multi constrained systems.",
+        "tools": "Python (NumPy, SciPy, JAX, Plotly), MATLAB/Simulink",
+        "jd_req": "Helping develop reusable RF models, test methods and engineering tools."
     },
     {
         "metric": "HIL / SIL<br>Integration &<br>Automated V&V",
-        "pillar": "Reusable Tooling, HIL/SIL V&V & Automation",
-        "verified": 3.0, "upskill": 0.5, "baseline": 3.0, "color": "#34d399",
-        "evidence": "Built end-to-end Software-in-the-Loop (SIL) verification pipelines and executed industrial Factory/Site Acceptance Testing (FAT/SAT).",
-        "tools": "Pytest, Bazel, Docker, GitHub Actions CI/CD, Automated HIL Test Scripting",
-        "jd_req": "Support integration, verification and validation of RF subsystems, including HIL and over-the-air testing"
+        "pillar": "Reusable Tooling, HIL/SIL V&V",
+        "verified": 2.7, "upskill": 0.5, "baseline": 3.0, "color": "#34d399",
+        "evidence": "Built Software in the Loop (SIL) verification pipeline, and executed industry Factory/Site Acceptance Testing (FAT/SAT).",
+        "tools": "VSCode, Python, Bazel, Docker, GitHub Actions CI/CD",
+        "jd_req": "Support the integration, verification and validation of RF subsystems, including hardware-in-the-loop and over-the-air testing."
     },
 
     # Pillar 3: Satellite Systems Engineering, Interfaces & Documentation (Core Strength)
     {
         "metric": "Subsystem<br>Requirements &<br>ECSS Standards",
-        "pillar": "Satellite Systems Engineering & Interfaces",
-        "verified": 2.9, "upskill": 0.6, "baseline": 2.8, "color": "#fbbf24",
-        "evidence": "QFD requirements traceability matrices, industrial interface definitions, and active study of ECSS-E-ST-50 space communications standards.",
-        "tools": "Requirements Traceability Matrices, QFD, Interface Control Documents (ICDs), ECSS Standards",
-        "jd_req": "Contribute to definition and documentation of RF subsystem requirements, interfaces & mission proposals"
+        "pillar": "Satellite Systems & ECSS Engineering",
+        "verified": 2.3, "upskill": 0.7, "baseline": 2.8, "color": "#fbbf24",
+        "evidence": "QC and QFD requirements, subsystem interface definitions and active study of ECSS standards.",
+        "tools": "Requirements Matrices, QFD, ECSS Standards",
+        "jd_req": "Contribute to the definition and documentation of RF subsystem requirements and interfaces."
     },
     {
-        "metric": "Power, Thermal &<br>Comms Mission<br>Trade-Offs",
-        "pillar": "Satellite Systems Engineering & Interfaces",
+        "metric": "Power, Thermal &<br>Communications<br>Trade-Offs",
+        "pillar": "Satellite Systems & ECSS Engineering",
         "verified": 3.2, "upskill": 0.4, "baseline": 2.8, "color": "#fbbf24",
-        "evidence": "Honours thesis on hierarchical predictive energy & thermal management (MPC); Mars habitat power budgeting; H2 electrolyser control systems.",
+        "evidence": "Honours thesis on hierarchical predictive energy & thermal management (MPC), Mars habitat power budgeting",
         "tools": "Model Predictive Control (MPC), Power/Thermal System Modelling, Trade-Off Matrices",
-        "jd_req": "Support RF subsystem analysis and technical trade-offs across performance and mission constraints"
+        "jd_req": "Support RF subsystem analysis and technical trade-offs across frequency bands, performance and mission constraints."
     },
     {
-        "metric": "Systematic<br>Documentation &<br>Team Collaboration",
-        "pillar": "Satellite Systems Engineering & Interfaces",
+        "metric": "Documentation &<br>Team Collaboration",
+        "pillar": "Satellite Systems & ECSS Engineering",
         "verified": 3.2, "upskill": 0.3, "baseline": 3.0, "color": "#fbbf24",
-        "evidence": "Delivered formal verification reports, network diagrams, and cross-disciplinary briefings across industrial automation and academic teams.",
-        "tools": "LaTeX, Weights & Biases, Git, Technical Reports, Multidisciplinary Engineering Reviews",
-        "jd_req": "Document analyses & test conclusions systematically; collaborate across RF, Hardware & Systems Engineering"
+        "evidence": "Helped in strong deliverly and communications for cross-disciplinary projects over academic work experiences.",
+        "tools": "Technical Reports, Presentations, Client Engineering Reviews",
+        "jd_req": "Document analyses, test activities and technical conclusions clearly and systematically."
     },
 ]
 
@@ -681,7 +681,7 @@ html_template = f"""<!DOCTYPE html>
             </div>
             <div class="pillar-legend">
                 <div class="pillar-item"><span class="dot" style="background:#38bdf8;"></span> <b>Pillar 1:</b> RF Subsystems, Link Budgeting & SDR Architectures</div>
-                <div class="pillar-item"><span class="dot" style="background:#34d399;"></span> <b>Pillar 2:</b> HIL/SIL V&V & Automation</div>
+                <div class="pillar-item"><span class="dot" style="background:#34d399;"></span> <b>Pillar 2:</b> HIL/SIL V&V</div>
                 <div class="pillar-item"><span class="dot" style="background:#fbbf24;"></span> <b>Pillar 3:</b> Satellite Systems & ECSS Engineering</div>
             </div>
             {chart_master_html}
