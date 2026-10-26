@@ -77,7 +77,7 @@ master_data = [
         "jd_req": "Support RF subsystem analysis and technical trade-offs across frequency bands, performance and mission constraints."
     },
     {
-        "metric": "Documentation &<br>Team Collaboration",
+        "metric": "Documentation <br>& Team<br>Collaboration",
         "pillar": "Satellite Systems & ECSS Engineering",
         "verified": 3.2, "upskill": 0.3, "baseline": 3.0, "color": "#fbbf24",
         "evidence": "Helped in strong deliverly and communications for cross-disciplinary projects over academic work experiences.",
