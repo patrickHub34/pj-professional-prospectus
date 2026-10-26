@@ -90,7 +90,7 @@ fig_master = go.Figure()
 
 fig_master.add_trace(
     go.Bar(
-        name="Verified Capability (Current)",
+        name="Verified and Self Defined Capability (Current)",
         x=[d["metric"] for d in master_data],
         y=[d["verified"] for d in master_data],
         marker=dict(
@@ -116,7 +116,7 @@ fig_master.add_trace(
 
 fig_master.add_trace(
     go.Bar(
-        name="18-Month MSc & Project Upskilling Horizon",
+        name="18-Month MSc & Project Upskilling Projection",
         x=[d["metric"] for d in master_data],
         y=[d["upskill"] for d in master_data],
         marker=dict(
@@ -131,7 +131,7 @@ fig_master.add_trace(
 
 fig_master.add_trace(
     go.Scatter(
-        name="GomSpace Early-Career Role Baseline",
+        name="GomSpace Early-Career Role Interpreted Expectations",
         x=[d["metric"] for d in master_data],
         y=[d["baseline"] for d in master_data],
         mode="markers+lines",
@@ -150,7 +150,7 @@ fig_master.update_layout(
     yaxis=dict(
         title="",
         range=[0, 4.35],
-        tickvals=[1, 2, 3, 4],
+        tickvals=[1, 2, 3, 5],
         ticktext=[
             "<b>L1: Theoretical Knowledge</b><br><span style='font-size:10px;color:#64748b'>Academic grounding, conceptual understanding & observation</span>",
             "<b>L2: Practical Foundation</b><br><span style='font-size:10px;color:#64748b'>Guided execution, basic scripting & lab operations</span>",
@@ -664,7 +664,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
-                    Electrical & Electronic Engineering (Honours) graduate transitioning into full-time Control Systems & Network Engineering alongside a <b>Master of Space Engineering at UNSW</b>. Combining strong foundations in <b>RF/communications theory, reusable Python/MATLAB simulation tooling, and automated Software/Hardware-in-the-Loop (SIL/HIL) verification</b> to systematically prepare for an Early-Career RF & Satellite Communications Engineer role at <b>GomSpace</b>.
+                    Final semester Electrical & Electronic Engineering (Honours) undergraduate with 1 year of industry and research experience in <b>performance numerical simulation, control systems, and model verification</b>. Proven capability in translating and accelerating mathematical models using <b>MATLAB, Python (JAX/NumPy), and C/C++</b>, alongside building reproducible, containerised Software in Loop (SIL) CI/CD validation pipelines.
                 </p>
             </div>
         </header>
@@ -677,7 +677,7 @@ html_template = f"""<!DOCTYPE html>
                     <h2 class="section-title">Engineering Competency & 18-Month Operational Readiness Matrix</h2>
                 </div>
                 <div class="section-desc">
-                    Maps my verified engineering capabilities and structured 18-month UNSW Master's upskilling horizon directly against GomSpace's RF Engineer requirements. Hover over any bar for project evidence, toolchains, and JD mapping.
+                    This matrix maps and aligns my self defined and verified engineering capabilities, and projected upskilling projections directly against GomSpace's Early Career RF Engineer requirements. Hover over any metric bar to view supporting project evidence, tools used, and job description (JD) requirement mapping.
                 </div>
             </div>
             <div class="pillar-legend">
