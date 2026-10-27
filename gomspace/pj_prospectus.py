@@ -27,7 +27,7 @@ master_data = [
     {
         "metric": "RF Front-End<br>Evaluation<br>(UHF/VHF/S/X)",
         "pillar": "RF Subsystems, Link Budgets & SDR Architecture",
-        "verified": 1.9, "upskill": 1.1, "baseline": 2.8, "color": "#38bdf8",
+        "verified": 1.7, "upskill": 1.1, "baseline": 2.8, "color": "#38bdf8",
         "evidence": "Undergraduate RF/microwave theory, and targeted through MSc RF project and coursework.",
         "tools": "Active MSc Upskilling in MATLAB RF Toolbox, CST / ADS / HFSS",
         "jd_req": "Assist with the evaluation and selection of RF front-end components across UHF, VHF, S-band and X-band."
@@ -35,7 +35,7 @@ master_data = [
     {
         "metric": "RF Lab Bench<br>Testing &<br>Troubleshooting",
         "pillar": "RF Subsystems, Link Budgets & SDR Architecture",
-        "verified": 1.8, "upskill": 0.9, "baseline": 2.8, "color": "#38bdf8",
+        "verified": 1.6, "upskill": 0.9, "baseline": 2.8, "color": "#38bdf8",
         "evidence": "University electronics laboratory work (oscilloscopes, signal generators, spectral measurements) & industry hardware troubleshooting.",
         "tools": "Spectrum Analysers, Signal Generators, oscilloscopes",
         "jd_req": "Prepare and carry out laboratory measurements using RF test equipment."
