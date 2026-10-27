@@ -106,7 +106,7 @@ fig_master.add_trace(
             "<b>%{x}</b><br>"
             "<span style='color:#94a3b8'>%{customdata[0]}</span><br><br>"
             "<b>Verified Competence Level:</b> Level %{y:.1f} / 4.0<br>"
-            "<b>18-Month Target (UNSW MSc + Projects):</b> Level %{customdata[4]:.1f} / 4.0<br>"
+            "<b>18-Month MSc & Project Upskilling Projection:</b> Level %{customdata[4]:.1f} / 4.0<br>"
             "<b>Key Evidence:</b> %{customdata[1]}<br>"
             "<b>Tools & Standards:</b> <span style='font-family:JetBrains Mono,monospace;color:#38bdf8'>%{customdata[2]}</span><br>"
             "<b>GomSpace JD Mapping:</b> <i>%{customdata[3]}</i><extra></extra>"
