@@ -717,35 +717,35 @@ html_template = f"""<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- 4. PROJECT BREAKDOWN 01: SIL & PREDICTIVE CONTROL -->
-        <section class="section-card">
-            <div class="section-header">
-                <div>
-                    <div class="section-kicker">03 // Key Project Breakdown — Reusable Simulation Tooling & Automated Verification</div>
-                    <h2 class="section-title">Data-Driven Hierarchical MPC & SIL Simulation Framework</h2>
-                </div>
-                <div class="section-desc">
-                    Honours Engineering Thesis | Containerised CI/CD Simulation Pipeline
-                </div>
-            </div>
-            <div class="project-grid">
-                <div class="project-info">
-                    <h4>Architecture & GomSpace Transferability</h4>
-                    <p>
-                        Designed and executed a Software-in-the-Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi agent autonomous driving scenarios/trajectories, utilizing vectorized numerical solvers and automated regression testing.
-                    </p>
-                    <ul class="spec-list">
-                        <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
-                        <li><span class="spec-label">SIMULATION ENGINE</span> <span>MATLAB + Python / JAX Vectorized Solvers</span></li>
-                        <li><span class="spec-label">SYSTEM OPTIMISATION</span> <span>Coupled Power & Thermal Constraints</span></li>
-                        <li><span class="spec-label">TELEMETRY & V&V</span> <span>Weights & Biases + GitHub Actions CI</span></li>
-                    </ul>
-                </div>
-                <div>
-                    {chart_proj1_html}
-                </div>
-            </div>
-        </section>
+         <!-- 4. PROJECT BREAKDOWN 01: SIL & PREDICTIVE CONTROL -->
+                <section class="section-card">
+                    <div class="section-header">
+                        <div>
+                            <div class="section-kicker">02 // Key Project Breakdown — Model Development, Simulation & Software Integrations</div>
+                            <h2 class="section-title">Data-Driven Hierarchical MPC & SIL Simulation Framework</h2>
+                        </div>
+                        <div class="section-desc">
+                            Honours Engineering Thesis | Containerised CI/CD Simulation Pipeline
+                        </div>
+                    </div>
+                    <div class="project-grid">
+                        <div class="project-info">
+                            <h4>Architecture & Project Scope</h4>
+                            <p>
+                                Designed and executed a Software in the Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi agent autonomous driving scenarios/trajectories, utilizing vectorized numerical solvers and automated regression testing.
+                            </p>
+                            <ul class="spec-list">
+                                <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
+                                <li><span class="spec-label">SIMULATION ENGINE</span> <span>MATLAB + Python / JAX + Waymax Simulator</span></li>
+                                <li><span class="spec-label">TEST DATASETS</span> <span>Waymo Open Motion Dataset</span></li>
+                                <li><span class="spec-label">TELEMETRY & V&V</span> <span>Weights & Biases + GitHub Actions CI</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            {chart_proj1_html}
+                        </div>
+                    </div>
+                </section>
 
         <!-- 5. PROJECT BREAKDOWN 02: INDUSTRIAL CONTROL & V&V -->
         <section class="section-card">
