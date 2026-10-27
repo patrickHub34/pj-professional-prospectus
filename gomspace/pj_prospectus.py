@@ -659,7 +659,7 @@ html_template = f"""<!DOCTYPE html>
             <div>
                 <div class="hero-meta">
                     <span class="badge">B.Eng (Hons) Electrical & Electronic Engineering (Completing Jan 2027)</span>
-                    <span class="badge green">Upcoming M.Sc Space Engineering (2027)</span>
+                    <span class="badge green">Commencing M.Sc Space Engineering (2027)</span>
                 </div>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
@@ -672,8 +672,8 @@ html_template = f"""<!DOCTYPE html>
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">01 // Target Role Alignment: Early-Career RF Engineer (Satellite Systems Hardware Team)</div>
-                    <h2 class="section-title">Engineering Competency & 18 Month Operational Readiness Matrix</h2>
+                    <div class="section-kicker">01 // Target Role Alignment: Early-Career RF Engineer</div>
+                    <h2 class="section-title">Engineering Competency & Operational Readiness Matrix</h2>
                 </div>
                 <div class="section-desc">
                     This matrix maps and aligns my self defined and verified engineering capabilities, and projected upskilling projections directly against GomSpace's Early Career RF Engineer requirements. Hover over any metric bar to view supporting project evidence, tools used, and job description (JD) requirement mapping.
@@ -687,88 +687,58 @@ html_template = f"""<!DOCTYPE html>
             {chart_master_html}
         </section>
 
-        <!-- 3. TARGETED 18-MONTH GOMSPACE PROJECT ROADMAP -->
+<!-- 3. PROJECT BREAKDOWN 01: SIL & PREDICTIVE CONTROL -->
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">02 // Proactive 14–18 Month R&D Horizon — Master of Space Engineering & Lab Builds</div>
-                    <h2 class="section-title">Proposed Project Alignment with GomSpace NanoCom & SDR Platforms</h2>
+                    <div class="section-kicker">02 // Key Project Breakdown — Model Development, Simulation & Software Integrations</div>
+                    <h2 class="section-title">Data-Driven Hierarchical MPC & SIL Simulation Framework</h2>
                 </div>
                 <div class="section-desc">
-                    Candidate research and hardware verification projects designed to bridge industrial control/simulation expertise with nanosatellite RF subsystem engineering.
+                    Honours Engineering Thesis | Containerised CI/CD Simulation Pipeline
                 </div>
             </div>
-            <div class="roadmap-grid">
-                <div class="roadmap-box">
-                    <span class="tag">CONCEPT A // REUSABLE RF TOOLING</span>
-                    <h4>Dynamic Orbital Link-Budget & RF-Chain Engine</h4>
-                    <p>Modular Python/MATLAB framework evaluating UHF, S-band, and X-band link margins across dynamic LEO pass geometries, rain/atmospheric attenuation, and cascaded RF front-end NF/IIP3 parameters.</p>
+            <div class="project-grid">
+                <div class="project-info">
+                    <h4>Architecture & Project Scope</h4>
+                    <p>
+                        Designed and executed a Software in the Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi agent autonomous driving scenarios/trajectories, utilizing vectorized numerical solvers and automated regression testing.
+                    </p>
+                    <ul class="spec-list">
+                        <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
+                        <li><span class="spec-label">SIMULATION ENGINE</span> <span>MATLAB + Python / JAX + Waymax Simulator</span></li>
+                        <li><span class="spec-label">TEST DATASETS</span> <span>Waymo Open Motion Dataset</span></li>
+                        <li><span class="spec-label">TELEMETRY & V&V</span> <span>Weights & Biases + GitHub Actions CI</span></li>
+                    </ul>
                 </div>
-                <div class="roadmap-box" style="border-top-color: var(--accent-green);">
-                    <span class="tag" style="color: var(--accent-green);">CONCEPT B // HIL BENCH VERIFICATION</span>
-                    <h4>SDR Hardware-in-the-Loop (HIL) Verification Testbed</h4>
-                    <p>Automated bench validation setup using SDR transceivers, VNA, and Spectrum Analyser to inject synthetic LEO Doppler profiles and channel impairments for BER/EVM verification.</p>
-                </div>
-                <div class="roadmap-box" style="border-top-color: var(--accent-amber);">
-                    <span class="tag" style="color: var(--accent-amber);">CONCEPT C // SYSTEMS & DSP OPTIMISATION</span>
-                    <h4>Power-Aware Comms & Onboard Data-Reduction Controller</h4>
-                    <p>Extending Hierarchical MPC thesis architecture to schedule high-data-rate S/X-band downlinks and onboard DSP data-reduction routines against real-time nanosatellite solar/battery constraints.</p>
+                <div>
+                    {chart_proj1_html}
                 </div>
             </div>
         </section>
 
-         <!-- 4. PROJECT BREAKDOWN 01: SIL & PREDICTIVE CONTROL -->
-                <section class="section-card">
-                    <div class="section-header">
-                        <div>
-                            <div class="section-kicker">02 // Key Project Breakdown — Model Development, Simulation & Software Integrations</div>
-                            <h2 class="section-title">Data-Driven Hierarchical MPC & SIL Simulation Framework</h2>
-                        </div>
-                        <div class="section-desc">
-                            Honours Engineering Thesis | Containerised CI/CD Simulation Pipeline
-                        </div>
-                    </div>
-                    <div class="project-grid">
-                        <div class="project-info">
-                            <h4>Architecture & Project Scope</h4>
-                            <p>
-                                Designed and executed a Software in the Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi agent autonomous driving scenarios/trajectories, utilizing vectorized numerical solvers and automated regression testing.
-                            </p>
-                            <ul class="spec-list">
-                                <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
-                                <li><span class="spec-label">SIMULATION ENGINE</span> <span>MATLAB + Python / JAX + Waymax Simulator</span></li>
-                                <li><span class="spec-label">TEST DATASETS</span> <span>Waymo Open Motion Dataset</span></li>
-                                <li><span class="spec-label">TELEMETRY & V&V</span> <span>Weights & Biases + GitHub Actions CI</span></li>
-                            </ul>
-                        </div>
-                        <div>
-                            {chart_proj1_html}
-                        </div>
-                    </div>
-                </section>
-
-        <!-- 5. PROJECT BREAKDOWN 02: INDUSTRIAL CONTROL & V&V -->
+        <!-- 4. PROJECT BREAKDOWN 02: POWER, CONTROL & RF PROCESSING -->
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">04 // Key Project Breakdown — Hardware-Software Integration & Acceptance Testing</div>
+                    <div class="section-kicker">03 // Key Project Breakdown — Control Systems Development, Testing and Integration</div>
                     <h2 class="section-title">Esperance Grain Terminal Control System Upgrade Project</h2>
                 </div>
                 <div class="section-desc">
-                    Spark Engineering | Control Systems & Network Engineering
+                    Spark Engineering | Undergraduate Control Systems Engineer
                 </div>
             </div>
             <div class="project-grid">
                 <div class="project-info">
                     <h4>Project Scope and My Role</h4>
                     <p>
-                        Facilitated the integration of modernised industrial control and communication systems into physical infrastructure. Executed Factory and Site Acceptance Testing (FAT/SAT) protocols, hardware troubleshooting, and systematic interface documentation across multidisciplinary teams.
+                        Facilitated the integration of modernised conveyor systems into legacy mechanical infrastructure through control system design, PLC programming, and SCADA development. Additionally, assisted with Factory and Site Acceptance Testing (FAT/SAT) to verify compliance with client expectations, and designed system performance metrics.
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">CONTROL LOGIC</span> <span>Schneider Control Expert (Control & Automation)</span></li>
                         <li><span class="spec-label">HMI & SCADA</span> <span>AVEVA Plant SCADA</span></li>
-                        <li><span class="spec-label">SYSTEMS V&V</span> <span>FAT & SAT Protocols & Hardware Troubleshooting</span></li>
-                        <li><span class="spec-label">DOCUMENTATION</span> <span>Network Systems Auditing & Interface Diagrams</span></li>
+                        <li><span class="spec-label">SYSTEMS V&V</span> <span>FAT & SAT Protocols & Execution</span></li>
+                        <li><span class="spec-label">PLANT DOCUMENTATION</span> <span>Plant Network Systems Auditing and Diagrams</span></li>
                     </ul>
                 </div>
                 <div>
@@ -777,12 +747,12 @@ html_template = f"""<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- 6. PROJECT BREAKDOWN 03: MARS HVAC & POWER -->
+        <!-- 5. PROJECT BREAKDOWN 03: MARS HVAC & POWER -->
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">05 // Key Project Breakdown — Space Systems Engineering, Power Budgets & Traceability</div>
-                    <h2 class="section-title">Mars Habitat Environmental & Power System Design</h2>
+                    <div class="section-kicker">04 // Key Project Breakdown — Thermal Dynamics, Systems & Resource Planning</div>
+                    <h2 class="section-title">Mars HVAC and Power System Design Project</h2>
                 </div>
                 <div class="section-desc">
                     Selective University Engineering Project | Conceptual Modular Mars Surface Habitat
@@ -792,13 +762,13 @@ html_template = f"""<!DOCTYPE html>
                 <div class="project-info">
                     <h4>Project Scope and My Role</h4>
                     <p>
-                        Evaluated closed-loop environmental and power management solutions for a modular space habitat, establishing strict power budgets, thermal trade-offs, and Quality Function Deployment (QFD) requirements traceability matrices.
+                        Investigated and evaluated potential closed-loop HVAC solutions for a conceptual modular Mars surface habitat, establishing power requirements and thermal mapping alongside Quality Function Deployment (QFD) matrices.
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">THERMAL DYNAMICS</span> <span>Regenerative Heat Exchange Fluid Loop & Aerogels</span></li>
-                        <li><span class="spec-label">SYSTEMS ENGINEERING</span> <span>QFD & Subsystem Requirements Traceability</span></li>
-                        <li><span class="spec-label">CONTROL SYSTEMS</span> <span>Sensor-Driven Feedback Control Architecture</span></li>
-                        <li><span class="spec-label">CORE DESIGN CONSTRAINTS</span> <span>Strict Mission Power Budgeting & Trade-Offs</span></li>
+                        <li><span class="spec-label">SYSTEMS ENGINEERING</span> <span>QFD & Requirements Definition and Traceability</span></li>
+                        <li><span class="spec-label">CONTROL SYSTEMS</span> <span>Environmental Sensored Feedback Controlled System</span></li>
+                        <li><span class="spec-label">CORE DESIGN CONSTRAINTS</span> <span>Power Usage and Management Constraints</span></li>
                     </ul>
                 </div>
                 <div>
@@ -807,22 +777,22 @@ html_template = f"""<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- 7. PROJECT BREAKDOWN 04: SALVAGE OPERATION -->
+        <!-- 6. PROJECT BREAKDOWN 04: SALVAGE OPERATION -->
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">06 // Key Project Breakdown — High-Consequence Field Operations & Risk Mitigation</div>
+                    <div class="section-kicker">05 // Key Project Breakdown — Complex Marine Salvage Operations & Risk Mitigation</div>
                     <h2 class="section-title">HMAS OTAMA Submarine Salvage Project</h2>
                 </div>
                 <div class="section-desc">
-                    Aegir Divers | Multi-Disciplinary Marine Recovery Project
+                    Aegir Divers | Extensive Multi-Disciplinary Submarine Recovery Project
                 </div>
             </div>
             <div class="project-grid">
                 <div class="project-info">
                     <h4>Project Scope and My Role</h4>
                     <p>
-                        Supported multi-disciplinary dive and engineering teams in executing the salvage operation of a compromised naval submarine, implementing buoyancy stabilization, wet welding repairs, and dynamic operational plan iterations under high-risk field constraints.
+                        Supported multi-disciplinary dive and engineering teams in executing the salvage operation of a compromised naval submarine, implementing buoyancy stabilization, wet welding repairs, and towage infrastructure.
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">FIELD OPERATIONS</span> <span>Underwater Salvage & Buoyancy Stabilization</span></li>
