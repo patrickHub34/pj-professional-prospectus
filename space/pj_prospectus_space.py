@@ -2,199 +2,20 @@ import plotly.graph_objects as go
 import plotly.io as pio
 
 # -------------------------------------------------------------------------
-# 1. CHART 1: MASTER ENGINEERING COMPETENCY & VERIFICATION MATRIX
-# -------------------------------------------------------------------------
-master_data = [
-    # Pillar 1: Software & Linux Infrastructure
-    {
-        "metric": "Docker Container<br> Operations &<br>Execution",
-        "pillar": "Software & Linux Infrastructure",
-        "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "Containerised simulation environments, runtime diagnostics, reproducible CI/CD pipelines.",
-        "tools": "Docker, Bash, Bazel, GitHub Actions",
-        "jd_req": "Start/stop containers, diagnostics, rebuild images, stable execution"
-    },
-    {
-        "metric": "Linux CLI &<br>Remote Server<br>Operations",
-        "pillar": "Software & Linux Infrastructure",
-        "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "Simulation execution through SSH, automated log filtering, SFTP data retrieval, permission management.",
-        "tools": "Linux CLI, SSH, Bash",
-        "jd_req": "Connect to remote servers via SSH, and transfer files FTP/SFTP/FTPS"
-    },
-    {
-        "metric": "Python & C/C++<br>Programming",
-        "pillar": "Software & Linux Infrastructure",
-        "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#38bdf8",
-        "evidence": "High performance numerical computing, build system integration, telemetry logging.",
-        "tools": "VSCode, Python and C/C++ libraries, Bazel, MATLAB/Simulink, Arduino IDE",
-        "jd_req": "Follow code structure, interpret build/runtime errors, adjust parameters"
-    },
-    # Pillar 2: Systems Engineering & V&V
-    {
-        "metric": "E2E Simulatiors<br>Operations &<br> Validations",
-        "pillar": "Systems Engineering & Validation Processes",
-        "verified": 3.0, "upskill": 0.3, "baseline": 3.5, "color": "#34d399",
-        "evidence": "Software-in-the-loop (SIL) predictive control, sensitivity analysis, non-compliance impact matrix evaluation.",
-        "tools": "Waymax SIL, Python, MATLAB/Simulink, W&B",
-        "jd_req": "Operate E2E simulators & assess non-compliance on mission performance"
-    },
-    {
-        "metric": "Test Dataset<br>Production &<br> Verification",
-        "pillar": "Systems Engineering & Validation Processes",
-        "verified": 3.0, "upskill": 0.2, "baseline": 3.0, "color": "#34d399",
-        "evidence": "Extraction, synthesis, and validation of large-scale autonomous vehicle scenario trajectory and telemetry datasets.",
-        "tools": "Python, NumPy/SciPy, Automated Pipelines, Waymax Simulator",
-        "jd_req": "Production and verification of test data sets for performance simulators"
-    },
-    {
-        "metric": "Calibration,<br>Hardware<br>Integration &<br> Anomaly Analysis &<br> Reporting",
-        "pillar": "Systems Engineering & Validation Processes",
-        "verified": 3.4, "upskill": 0.4, "baseline": 3.0, "color": "#34d399",
-        "evidence": "Time-series telemetry anomaly detection, ramp and step-response characterisations",
-        "tools": "Python, MATLAB, Weights & Biases",
-        "jd_req": "Analyse calibration and characterization campaign data & Identify software anomalies and report "
-    },
-    {
-        "metric": "Requirements &<br>VCB Compliance",
-        "pillar": "Systems Engineering & Validation Processes",
-        "verified": 2.0, "upskill": 0.5, "baseline": 3.0, "color": "#34d399",
-        "evidence": "System verification matrices, SAT and FAT Testing Procedures, formal multi-stakeholder technical reviews.",
-        "tools": "Verification Matrices, Git",
-        "jd_req": "Support Verification Control Boards (VCB) & compliance tracking"
-    },
-    # Pillar 3: Payload & Signal Processing
-    {
-        "metric": "Optical Imager<br>Simulation &<br>Processing",
-        "pillar": "Hardware Operations & Signal Processing",
-        "verified": 1.5, "upskill": 1.0, "baseline": 3.5, "color": "#fbbf24",
-        "evidence": "Proven expertise with optical instruments (Imagers).",
-        "tools": "Python, MATLAB/Simulink Image Processing",
-        "jd_req": "Expertise with optical instruments (imagers) for simulation & processing"
-    },
-    {
-        "metric": "SAR Signal<br>Processing",
-        "pillar": "Hardware Operations & Signal Processing",
-        "verified": 2.0, "upskill": 0.5, "baseline": 3.0, "color": "#fbbf24",
-        "evidence": "Digital communications link modeling, OFDM signal processing, phase/FFT analysis.",
-        "tools": "MATLAB Wireless Comms, FFT",
-        "jd_req": "Expertise in the field of Synthetic Aperture Radar (SAR) processing"
-    },
-]
-
-
-fig_master = go.Figure()
-
-fig_master.add_trace(
-    go.Bar(
-        name="Verified Capability",
-        x=[d["metric"] for d in master_data],
-        y=[d["verified"] for d in master_data],
-        marker=dict(
-            color=[d["color"] for d in master_data],
-            line=dict(color="#111827", width=1.5),
-            opacity=0.92,
-        ),
-        customdata=[
-            [d["pillar"], d["evidence"], d["tools"], d["jd_req"], d["verified"] + d["upskill"]]
-            for d in master_data
-        ],
-        hovertemplate=(
-            "<b>%{x}</b><br>"
-            "<span style='color:#94a3b8'>%{customdata[0]}</span><br><br>"
-            "<b>Verified Competance Level:</b> Level %{y:.1f} / 4.0<br>"
-            "<b>Active Growth Target (02/27):</b> Level %{customdata[4]:.1f} / 4.0<br>"
-            "<b>Key Evidence:</b> %{customdata[1]}<br>"
-            "<b>Tools:</b> <span style='font-family:JetBrains Mono,monospace;color:#38bdf8'>%{customdata[2]}</span><br>"
-            "<b>JD Requirment/s:</b> <i>%{customdata[3]}</i><extra></extra>"
-        ),
-    )
-)
-
-fig_master.add_trace(
-    go.Bar(
-        name="Active Upskilling and Research",
-        x=[d["metric"] for d in master_data],
-        y=[d["upskill"] for d in master_data],
-        marker=dict(
-            color=[d["color"] for d in master_data],
-            opacity=0.25,
-            pattern=dict(shape="/", solidity=0.3),
-            line=dict(color=[d["color"] for d in master_data], width=1.2),
-        ),
-        hoverinfo="skip",
-    )
-)
-
-fig_master.add_trace(
-    go.Scatter(
-        name="Role Expectation",
-        x=[d["metric"] for d in master_data],
-        y=[d["baseline"] for d in master_data],
-        mode="markers+lines",
-        line=dict(color="#f43f5e", width=2, dash="dot"),
-        marker=dict(symbol="diamond", size=9, color="#f43f5e", line=dict(color="#ffffff", width=1.2)),
-        hovertemplate="<b>%{x}</b><br>JD Target Baseline: Level %{y:.1f}<extra></extra>",
-    )
-)
-
-fig_master.update_layout(
-    barmode="stack",
-    bargap=0.34,
-    paper_bgcolor="rgba(0,0,0,0)",
-    plot_bgcolor="rgba(0,0,0,0)",
-    font=dict(family="Inter, sans-serif", color="#cbd5e1", size=12),
-    yaxis=dict(
-        title="",
-        range=[0, 4.35],
-        tickvals=[1, 2, 3, 4],
-        ticktext=[
-            "<b>L1: Theoretical Knowledge</b><br><span style='font-size:10px;color:#64748b'>Academic grounding, conceptual understanding & observation</span>",
-            "<b>L2: Practical Foundation</b><br><span style='font-size:10px;color:#64748b'>Guided execution, basic scripting & procedural operations</span>",
-            "<b>L3: Proficient Execution</b><br><span style='font-size:10px;color:#64748b'>Operational competence, system diagnostics & troubleshooting</span>",
-            "<b>L4: Advanced Applications</b><br><span style='font-size:10px;color:#64748b'>Full integrations, validation & architectural synthesis</span>",
-        ],
-        gridcolor="#1e293b",
-        zerolinecolor="#334155",
-    ),
-    xaxis=dict(
-        title="",
-        tickangle=0,
-        tickfont=dict(size=11, color="#e2e8f0"),
-        gridcolor="rgba(30, 41, 59, 0.4)",
-    ),
-    legend=dict(
-        orientation="h",
-        yanchor="bottom", y=1.04,
-        xanchor="right", x=1,
-        bgcolor="rgba(17, 24, 39, 0.85)",
-        bordercolor="#334155", borderwidth=1,
-        font=dict(size=11),
-    ),
-    hoverlabel=dict(
-        bgcolor="#0f172a", bordercolor="#38bdf8",
-        font=dict(family="Inter, sans-serif", size=12, color="#f8fafc"),
-        align="left",
-    ),
-    margin=dict(l=175, r=25, t=60, b=65),
-    height=520,
-)
-
-# -------------------------------------------------------------------------
 # 2. PROJECT 1 BREAKDOWN CHART: H-MPC & SIL SIMULATION PIPELINE
 # -------------------------------------------------------------------------
 proj1_metrics = [
     "Build & CI<br>(Bazel / Docker / Git Actions)",
-    "High-Performance Numerical Simulation<br>(Python / JAX Acceleration)",
-    "Predictive Control Design<br>(Hierarchical MPC)",
-    "Cloud Telemetry & Anomaly Log<br>(Weights & Biases)",
+    "Reusable Numerical Modelling<br>(Python / MATLAB / JAX)",
+    "Multi-Constraint Optimisation<br>(Hierarchical MPC)",
+    "Automated V&V & Telemetry<br>(Weights & Biases)",
 ]
-proj1_scores = [3.0, 3.0, 3.6, 3.0]
+proj1_scores = [3.0, 3.2, 3.6, 3.0]
 proj1_details = [
-    "Reproducible monorepo builds in Linux containers with automated CI testing.",
-    "Native JAX compiled vectorised simulation loops",
-    "Coupled energy and battery thermal management under dynamic constraints.",
-    "Real-time experiment tracking and run comparison.",
+    "Reproducible monorepo builds in Linux containers with automated CI regression testing.",
+    "Modular, vectorized simulation architectures directly transferable to RF link & channel modelling.",
+    "Coupled energy and thermal management under dynamic constraints—applicable to satellite downlink scheduling.",
+    "Systematic experiment tracking, diagnostic logging, and automated model verification.",
 ]
 
 fig_proj1 = go.Figure(
@@ -203,15 +24,15 @@ fig_proj1 = go.Figure(
         x=proj1_scores,
         orientation="h",
         marker=dict(
-            color=["#38bdf8", "#38bdf8", "#34d399", "#818cf8"],
+            color=["#34d399", "#38bdf8", "#fbbf24", "#818cf8"],
             line=dict(color="#111827", width=1),
             opacity=0.9,
         ),
         customdata=proj1_details,
-        text=[f"L{s:.1f}" for s in proj1_scores],
+        text=[f"<b>L{s:.1f}</b>" for s in proj1_scores],
         textposition="inside",
         insidetextanchor="end",
-        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a", weight="bold"),
+        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a"),
         hovertemplate="<b>%{y}</b><br>Verified Tier: Level %{x:.1f} / 4.0<br>%{customdata}<extra></extra>",
     )
 )
@@ -235,22 +56,22 @@ fig_proj1.update_layout(
 )
 
 # -------------------------------------------------------------------------
-# 3. PROJECT 2 BREAKDOWN CHART: POWER, CONTROL & RF SIGNAL PROCESSING
+# 3. PROJECT 2 BREAKDOWN CHART: INDUSTRIAL CONTROL, NETWORKS & V&V
 # -------------------------------------------------------------------------
 proj2_metrics = [
     "Systems Verification & Validation<br>(FAT/SAT Compliance)",
     "Control Logic & PLC Integration<br>(Schneider / SCADA)",
-    "Hardware to Software Interfacing and Integration<br>(Conveyor Systems)",
-    "Architecture & Network Documentation",
-    "Interdisciplinary Engineering Team Coordination",
+    "Hardware-to-Software Interfacing<br>(Field Integration)",
+    "Architecture & Interface Documentation",
+    "Interdisciplinary Engineering Coordination",
 ]
 proj2_scores = [2.8, 3.2, 2.6, 3.0, 3.0]
 proj2_details = [
-    "Assited in FAT and SAT documentation and priocedures to verify control system<br>compliance with client and design expectations.",
-    "Assited in development of system control logic and HMI systems using Schneider<br>Control Expert and AVEVA Plant SCADA.",
-    "Works involved integrated modernised conveyor systems into legacy<br>mechanical infrastructure.",
-    "Developed plant network systems diagrams and management of<br>system documentation.",
-    "Collaborated across project teams in the design and<br>performance validation processes."
+    "Assisted in FAT and SAT documentation and procedures to verify system<br>compliance with client and design expectations.",
+    "Assisted in development of system control logic and HMI systems using Schneider<br>Control Expert and AVEVA Plant SCADA.",
+    "Integrated modernised control and communication systems into physical<br>infrastructure.",
+    "Developed plant network systems diagrams and systematic interface<br>documentation.",
+    "Collaborated across hardware, electrical, and software teams in design and<br>performance validation."
 ]
 
 fig_proj2 = go.Figure(
@@ -259,15 +80,15 @@ fig_proj2 = go.Figure(
         x=proj2_scores,
         orientation="h",
         marker=dict(
-            color=["#34d399", "#34d399", "#34d399", "#38bdf8", "#fbbf24"],
+            color=["#34d399", "#34d399", "#38bdf8", "#fbbf24", "#fbbf24"],
             line=dict(color="#111827", width=1),
             opacity=0.9,
         ),
         customdata=proj2_details,
-        text=[f"L{s:.1f}" for s in proj2_scores],
+        text=[f"<b>L{s:.1f}</b>" for s in proj2_scores],
         textposition="inside",
         insidetextanchor="end",
-        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a", weight="bold"),
+        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a"),
         hovertemplate="<b>%{y}</b><br>Verified Tier: Level %{x:.1f} / 4.0<br>%{customdata}<extra></extra>",
     )
 )
@@ -302,11 +123,11 @@ proj3_metrics = [
 ]
 proj3_scores = [3.2, 3.4, 3.0, 3.0, 3.0]
 proj3_details = [
-    "Translated life support requirements into verifiable engineering metrics.",
-    "Managed core design constraints of power usage and thermal efficiency.",
-    "Modeled regenerative heat exchange fluid loops and advanced aerogels.",
-    "Evaluated and proposed complete closed-loop thermal system.",
-    "Validated systems feasibility for conceptual surface habitats.",
+    "Translated mission requirements into verifiable subsystem engineering metrics.",
+    "Managed core design trade-offs of power budgets and thermal dissipation.",
+    "Modelled regenerative heat exchange fluid loops and advanced thermal insulation.",
+    "Evaluated and proposed complete closed-loop environmental control architecture.",
+    "Validated systems feasibility and documented technical trade-offs.",
 ]
 
 fig_proj3 = go.Figure(
@@ -320,10 +141,10 @@ fig_proj3 = go.Figure(
             opacity=0.9,
         ),
         customdata=proj3_details,
-        text=[f"L{s:.1f}" for s in proj3_scores],
+        text=[f"<b>L{s:.1f}</b>" for s in proj3_scores],
         textposition="inside",
         insidetextanchor="end",
-        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a", weight="bold"),
+        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a"),
         hovertemplate="<b>%{y}</b><br>Verified Tier: Level %{x:.1f} / 4.0<br>%{customdata}<extra></extra>",
     )
 )
@@ -359,9 +180,9 @@ proj4_metrics = [
 proj4_scores = [3.2, 3.0, 3.0, 2.8, 2.6]
 proj4_details = [
     "Constructed and secured precision buoyancy systems and<br>integrated structural wet welding repairs.",
-    "Implemented secure towage infrastructure and assited in towage operations",
-    "Engaged in dynamic multi-disciplinary salvage plans adaption and iterations.",
-    "Liaised with the engineering team on on specifications and expectations.",
+    "Implemented secure towage infrastructure and assisted in towage operations.",
+    "Engaged in dynamic multi-disciplinary salvage plan adaptation and iterations.",
+    "Liaised with the engineering team on specifications and expectations.",
     "Safety and environmental compliance in active ocean conditions.",
 ]
 
@@ -376,10 +197,10 @@ fig_proj4 = go.Figure(
             opacity=0.9,
         ),
         customdata=proj4_details,
-        text=[f"L{s:.1f}" for s in proj4_scores],
+        text=[f"<b>L{s:.1f}</b>" for s in proj4_scores],
         textposition="inside",
         insidetextanchor="end",
-        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a", weight="bold"),
+        textfont=dict(family="JetBrains Mono, monospace", size=11, color="#0f172a"),
         hovertemplate="<b>%{y}</b><br>Verified Tier: Level %{x:.1f} / 4.0<br>%{customdata}<extra></extra>",
     )
 )
@@ -403,8 +224,10 @@ fig_proj4.update_layout(
 )
 
 # Convert figures to embeddable HTML fragments
-chart_master_html = pio.to_html(fig_master, full_html=False, include_plotlyjs="cdn", config={"displaylogo": False})
-chart_proj1_html = pio.to_html(fig_proj1, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
+# (Removed chart_master_html since it is not used in this version)
+
+# IMPORTANT: include_plotlyjs="cdn" is moved to proj1 so the interactive charts still load properly
+chart_proj1_html = pio.to_html(fig_proj1, full_html=False, include_plotlyjs="cdn", config={"displayModeBar": False})
 chart_proj2_html = pio.to_html(fig_proj2, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
 chart_proj3_html = pio.to_html(fig_proj3, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
 chart_proj4_html = pio.to_html(fig_proj4, full_html=False, include_plotlyjs=False, config={"displayModeBar": False})
@@ -417,7 +240,7 @@ html_template = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick Johnston | Engineering Prospectus</title>
+    <title>Patrick Johnston | GomSpace RF & SatCom Engineering Prospectus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -478,11 +301,6 @@ html_template = f"""<!DOCTYPE html>
             overflow: hidden;
             flex-shrink: 0;
         }}
-        .avatar-box img {{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }}
         .hero-meta {{
             display: flex;
             flex-wrap: wrap;
@@ -503,6 +321,11 @@ html_template = f"""<!DOCTYPE html>
             color: var(--accent-green);
             border-color: rgba(52, 211, 153, 0.25);
         }}
+        .badge.amber {{
+            background: rgba(251, 191, 36, 0.1);
+            color: var(--accent-amber);
+            border-color: rgba(251, 191, 36, 0.25);
+        }}
         .hero-title {{
             font-size: 1.85rem;
             font-weight: 700;
@@ -512,8 +335,32 @@ html_template = f"""<!DOCTYPE html>
         .hero-subtitle {{
             color: var(--text-secondary);
             font-size: 0.98rem;
-            max-width: 880px;
-            margin-bottom: 1.1rem;
+            max-width: 940px;
+            margin-bottom: 0.5rem;
+        }}
+        /* Pillar Legend Pills */
+        .pillar-legend {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-bottom: 0.8rem;
+            padding: 0.6rem 1rem;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }}
+        .pillar-item {{
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }}
+        .dot {{
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            display: inline-block;
         }}
         /* Section Cards */
         .section-card {{
@@ -548,6 +395,37 @@ html_template = f"""<!DOCTYPE html>
         }}
         .section-desc {{
             font-size: 0.88rem;
+            color: var(--text-secondary);
+            max-width: 540px;
+        }}
+        /* Roadmap Cards */
+        .roadmap-grid {{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-top: 1rem;
+        }}
+        .roadmap-box {{
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid var(--border-subtle);
+            border-top: 2px solid var(--accent-blue);
+            border-radius: 10px;
+            padding: 1.25rem;
+        }}
+        .roadmap-box h4 {{
+            font-size: 0.98rem;
+            color: #f8fafc;
+            margin-bottom: 0.4rem;
+        }}
+        .roadmap-box .tag {{
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--accent-blue);
+            display: block;
+            margin-bottom: 0.5rem;
+        }}
+        .roadmap-box p {{
+            font-size: 0.84rem;
             color: var(--text-secondary);
         }}
         /* Project Grid */
@@ -587,6 +465,7 @@ html_template = f"""<!DOCTYPE html>
         @media (max-width: 920px) {{
             .hero-card {{ grid-template-columns: 1fr; text-align: left; }}
             .project-grid {{ grid-template-columns: 1fr; }}
+            .roadmap-grid {{ grid-template-columns: 1fr; }}
         }}
     </style>
 </head>
@@ -595,36 +474,22 @@ html_template = f"""<!DOCTYPE html>
         <!-- 1. EXECUTIVE INTRODUCTION BANNER -->
         <header class="hero-card">
             <div class="avatar-box">
-                <!-- <img src="profile.jpg" alt="Patrick Johnston"> -->
                 PJ
             </div>
             <div>
                 <div class="hero-meta">
-                    <span class="badge">B.Eng (Hons) Electrical & Electronics Engineering</span>
-                    <span class="badge green">Docker / Linux / Python / C++</span>
+                    <span class="badge">B.Eng (Hons) Electrical & Electronic Engineering (Completing Jan 2027)</span>
+                    <span class="badge green">Commencing M.Sc Space Engineering (2027)</span>
                 </div>
                 <h1 class="hero-title">Patrick Johnston — Engineering Prospectus</h1>
                 <p class="hero-subtitle">
-                    Final year Electrical & Electronics Engineering undergraduate with experience in <b>Control and Power Systems Engineering</b>. I have notable technical project based experience in building C/C++ and Python programs, containerised Software in the Loop (SIL) simulation pipelines, and systems compliance and factory acceptance testing verification.
+                    Final semester Electrical & Electronic Engineering (Honours) undergraduate with 1 year of industry and research experience in <b>performance numerical simulation, control systems, and model verification</b>. Proven capability in translating and accelerating mathematical models using <b>MATLAB, Python (JAX/NumPy), and C/C++</b>, alongside building reproducible, containerised Software in Loop (SIL) CI/CD validation pipelines.
                 </p>
             </div>
         </header>
 
-        <!-- 2. MASTER COMPETENCY & VERIFICATION MATRIX -->
-        <section class="section-card">
-            <div class="section-header">
-                <div>
-                    <div class="section-kicker">01 // Technical Skills Overview</div>
-                    <h2 class="section-title">Engineering Competency & Operational Readiness Matrix</h2>
-                </div>
-                <div class="section-desc">
-                    This matrix aligns my self defined competencies with the core job requirements and expectations. Hover over any metric bar to view supporting project evidence, tools used, and job description (JD) requirement mapping.
-                </div>
-            </div>
-            {chart_master_html}
-        </section>
 
-        <!-- 3. PROJECT BREAKDOWN 01: SIL & PREDICTIVE CONTROL -->
+<!-- 3. PROJECT BREAKDOWN 01: SIL & PREDICTIVE CONTROL PROJECT EXPERIENCE-->
         <section class="section-card">
             <div class="section-header">
                 <div>
@@ -632,14 +497,14 @@ html_template = f"""<!DOCTYPE html>
                     <h2 class="section-title">Data-Driven Hierarchical MPC & SIL Simulation Framework</h2>
                 </div>
                 <div class="section-desc">
-                    Honours Engineering Thesis | Linux/Docker Conterised CI/CD Simulation Pipeline
+                    Honours Engineering Thesis | Containerised CI/CD Simulation Pipeline
                 </div>
             </div>
             <div class="project-grid">
                 <div class="project-info">
                     <h4>Architecture & Project Scope</h4>
                     <p>
-                        Designed and executed a Software in the Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi-agent driving autonomous driving scenarios/trajectories.
+                        Designed and executed a Software in the Loop (SIL) simulation framework evaluating predictive energy and thermal control strategies across multi agent autonomous driving scenarios/trajectories, utilizing vectorized numerical solvers and automated regression testing.
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">EXECUTION ENV</span> <span>Docker + Bazel Monorepo</span></li>
@@ -654,7 +519,7 @@ html_template = f"""<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- 4. PROJECT BREAKDOWN 02: POWER, CONTROL & RF PROCESSING -->
+        <!-- 4. PROJECT BREAKDOWN 02: POWER, CONTROL & RF PROCESSING PROJECT EXPERIENCE-->
         <section class="section-card">
             <div class="section-header">
                 <div>
@@ -669,7 +534,7 @@ html_template = f"""<!DOCTYPE html>
                 <div class="project-info">
                     <h4>Project Scope and My Role</h4>
                     <p>
-                        Facilitated the integration of modernised conveyor systems into legacy mechanical infrastructure through control system design, through PLC programming and SCADA development. Additionally, assisted with Factory and Site Acceptance Testing (FAT/SAT) to verify compliance with client expectations, and designed system performance metrics.
+                        Facilitated the integration of modernised conveyor systems into legacy mechanical infrastructure through control system design, PLC programming, and SCADA development. Additionally, assisted with Factory and Site Acceptance Testing (FAT/SAT) to verify compliance with client expectations, and designed system performance metrics.
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">CONTROL LOGIC</span> <span>Schneider Control Expert (Control & Automation)</span></li>
@@ -684,7 +549,7 @@ html_template = f"""<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- 5. PROJECT BREAKDOWN 03: MARS HVAC & POWER -->
+        <!-- 5. PROJECT BREAKDOWN 03: MARS HVAC & POWER PROJECT EXPERIENCE-->
         <section class="section-card">
             <div class="section-header">
                 <div>
@@ -699,12 +564,12 @@ html_template = f"""<!DOCTYPE html>
                 <div class="project-info">
                     <h4>Project Scope and My Role</h4>
                     <p>
-                        Investigated and evaluated potential closed loop HVAC solutions for a conceptual modular Mars surface habitat, establishing power requirements and thermal mapping alongside Quality Function Deployment (QFD) matrices.
+                        Investigated and evaluated potential closed-loop HVAC solutions for a conceptual modular Mars surface habitat, establishing power requirements and thermal mapping alongside Quality Function Deployment (QFD) matrices.
                     </p>
                     <ul class="spec-list">
                         <li><span class="spec-label">THERMAL DYNAMICS</span> <span>Regenerative Heat Exchange Fluid Loop & Aerogels</span></li>
                         <li><span class="spec-label">SYSTEMS ENGINEERING</span> <span>QFD & Requirements Definition and Traceability</span></li>
-                        <li><span class="spec-label">CONTROL SYSTEMS</span> <span> Environmental Sensored Feedback Controlled System</span></li>
+                        <li><span class="spec-label">CONTROL SYSTEMS</span> <span>Environmental Sensored Feedback Controlled System</span></li>
                         <li><span class="spec-label">CORE DESIGN CONSTRAINTS</span> <span>Power Usage and Management Constraints</span></li>
                     </ul>
                 </div>
@@ -714,11 +579,11 @@ html_template = f"""<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- 6. PROJECT BREAKDOWN 04: SALVAGE OPERATION -->
+        <!-- 6. PROJECT BREAKDOWN 04: SALVAGE OPERATION PROJECT EXPERIENCE-->
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">05 // Key Project Breakdown — Complex Marine Salavge Operations & Risk Mitigation</div>
+                    <div class="section-kicker">05 // Key Project Breakdown — Complex Marine Salvage Operations & Risk Mitigation</div>
                     <h2 class="section-title">HMAS OTAMA Submarine Salvage Project</h2>
                 </div>
                 <div class="section-desc">
@@ -748,7 +613,8 @@ html_template = f"""<!DOCTYPE html>
 </html>
 """
 
-with open("index.html", "w", encoding="utf-8") as f:
+# Change this line at the bottom of your new script
+with open("space-ai-prospectus.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print("Successfully generated full multi-section prospectus: index.html")
+print("Successfully generated Space-tailored engineering prospectus: index.html")
