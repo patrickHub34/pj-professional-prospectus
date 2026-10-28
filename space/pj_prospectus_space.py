@@ -493,7 +493,7 @@ html_template = f"""<!DOCTYPE html>
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">02 // Key Project Breakdown — Model Development, Simulation & Software Integrations</div>
+                    <div class="section-kicker">01 // Key Project Breakdown — Model Development, Simulation & Software Integrations Project Experience</div>
                     <h2 class="section-title">Data-Driven Hierarchical MPC & SIL Simulation Framework</h2>
                 </div>
                 <div class="section-desc">
@@ -523,7 +523,7 @@ html_template = f"""<!DOCTYPE html>
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">03 // Key Project Breakdown — Control Systems Development, Testing and Integration</div>
+                    <div class="section-kicker">02 // Key Project Breakdown — Control Systems Development, Testing and Integration Project Experience</div>
                     <h2 class="section-title">Esperance Grain Terminal Control System Upgrade Project</h2>
                 </div>
                 <div class="section-desc">
@@ -553,7 +553,7 @@ html_template = f"""<!DOCTYPE html>
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">04 // Key Project Breakdown — Thermal Dynamics, Systems & Resource Planning</div>
+                    <div class="section-kicker">03 // Key Project Breakdown — Thermal Dynamics, Systems & Resource Planning Project Experience</div>
                     <h2 class="section-title">Mars HVAC and Power System Design Project</h2>
                 </div>
                 <div class="section-desc">
@@ -583,7 +583,7 @@ html_template = f"""<!DOCTYPE html>
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="section-kicker">05 // Key Project Breakdown — Complex Marine Salvage Operations & Risk Mitigation</div>
+                    <div class="section-kicker">04 // Key Project Breakdown — Complex Marine Salvage Operations & Risk Mitigation Project Experience</div>
                     <h2 class="section-title">HMAS OTAMA Submarine Salvage Project</h2>
                 </div>
                 <div class="section-desc">
